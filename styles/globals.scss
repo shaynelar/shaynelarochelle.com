@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body {
 	padding: 0;
@@ -21,7 +20,15 @@ a {
 	margin: 0;
 }
 
-
 .hero-height {
 	height: calc(100vh - 5.5rem);
+}
+
+.button {
+	transition: 0.3s;
+	&:hover {
+		background-color: black;
+		color: white;
+		opacity: 0.8;
+	}
 }

@@ -12,18 +12,21 @@ import {
 	useReducedMotion,
 } from "framer-motion";
 import React, { useEffect } from "react";
+import { MobileMenuButton, NavButton } from "./Button";
 
-type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
 const NavBar = () => {
 	return (
 		<>
-			<header className="flex justify-between p-4">
+			<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center">
 				<h1 className="text-xl font-bold">Shayne LaRochelle</h1>
 
 				<nav>
 					<ul className="flex">
-						<li className="hidden md:block m-2">
-							<NavButton href="#">Home</NavButton>
+						<li className="hidden md:block m-2 ">
+							<NavButton href="#">
+								Home
+							</NavButton>
 						</li>
 						<li className="hidden md:block m-2">
 							<NavButton href="#">About</NavButton>
@@ -37,13 +40,7 @@ const NavBar = () => {
 };
 export default NavBar;
 
-const NavButton = (props: AnchorProps) => {
-	return (
-		<Link href={props.href!} passHref>
-			<a {...props} />
-		</Link>
-	);
-};
+
 
 const topVariants = {
 	open: { rotate: 45, y: 7 },
@@ -62,13 +59,13 @@ const bottomVariants = {
 
 function MobileMenu() {
 	return (
-		<div className="md:hidden">
+		<div className="md:hidden ">
 			<Menu>
 				{({ isExpanded }) => {
 					const state = isExpanded ? "open" : "closed";
 					return (
 						<>
-							<MenuButton className="inline-flex items-center justify-center p-1 transition border-2 w-14 h-14 focus:outline-none">
+							<MenuButton className="inline-flex items-center justify-center p-1 transition border-2 w-14 h-14 focus:outline-none ">
 								<svg
 									width="32"
 									height="32"
@@ -136,9 +133,9 @@ const MobileMenuList = () => {
 					className="z-50"
 				>
 					<motion.div
-						initial={{ x: 50, opacity: 0 }}
-						animate={{ x: 0, opacity: 1 }}
-						exit={{ x: -50, opacity: 0 }}
+						initial={{ y: -50, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						exit={{ y: -50, opacity: 0 }}
 						transition={{
 							duration: 0.3,
 							ease: "linear",
@@ -158,10 +155,4 @@ const MobileMenuList = () => {
 	);
 };
 
-const MobileMenuButton = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
-	return (
-		<li className="w-full text-center p-4 border-b-2 border-gray-900 hover:bg-blue-200">
-			<a {...props} />
-		</li>
-	);
-};
+
