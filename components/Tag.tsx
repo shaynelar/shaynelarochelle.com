@@ -1,14 +1,16 @@
-export function Tag(
-	props: React.HTMLAttributes<HTMLSpanElement>,
-	{ label }: { label: string }
+export default function Tag(
+	props: React.HTMLAttributes<HTMLSpanElement> & {
+		label: string;
+		color: string;
+	}
 ) {
 	return (
 		<span
-			key={label}
-			className="inline-block rounded-full py-2 px-4 bg-dark font-semibold text-white"
+			key={props.label}
 			{...props}
+			className={`inline-block rounded-full py-2 px-4 font-semibold text-white shadow-2xl bg-${props.color} ${props.className}`}
 		>
-			{label}
+			#{props.label}
 		</span>
 	);
 }

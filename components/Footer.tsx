@@ -9,7 +9,7 @@ export default function Footer() {
 				<Heading className="text-3xl text-white my-8 font-bold">
 					Shayne LaRochelle
 				</Heading>
-				<h2 className="text-white">Conntect with me!</h2>
+				<h2 className="text-white">Connect with me!</h2>
 				<div className="flex gap-4 mt-4">
 					<SiGithub className="text-2xl text-white" />
 					<SiLinkedin className="text-2xl text-white" />

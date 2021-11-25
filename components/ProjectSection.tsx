@@ -15,13 +15,7 @@ function ProjectSection() {
 			</Heading>
 			<div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-4">
 				{data.map((project) => (
-					<ProjectCard
-						key={project.title}
-						title={project.title}
-						about={project.about}
-						image={project.image}
-						svg={project.svg}
-					/>
+					<ProjectCard key={project.title} project={project} />
 				))}
 			</div>
 		</FlexContainer>

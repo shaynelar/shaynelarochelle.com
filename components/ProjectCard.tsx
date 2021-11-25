@@ -4,30 +4,40 @@ import { ActionButton, NavButton } from "./Button";
 import Heading from "./Heading";
 import TechBadge, { Icon } from "./TechBadge";
 import dynamic from "next/dynamic";
+import Tag from "./Tag";
 
 interface Props {
-	title: string;
-	about: string;
-	image: string;
-	svg: string[];
+	project: {
+		title: string;
+		about: string;
+		image: string;
+		type: {
+			title: string;
+			color: string;
+		};
+		svg: string[];
+	};
 }
 
-function ProjectCard({ title, about, image, svg }: Props) {
+function ProjectCard({ project }: Props) {
 	return (
 		<div
-			id={`${title}-card`}
+			id={`${project.title}-card`}
 			className="p-12 rounded-2xl bg-dark shadow-2xl shadow-xl max-w-2xl"
 		>
 			{/* <img className="object-contain absolute top-0" src={image} /> */}
 
-			<Heading className="text-4xl font-semibold text-white my-8">
-				{title}
+			<Heading className="text-3xl font-semibold text-white my-8">
+				{project.title}
 			</Heading>
-			<p className="text-white my-4">{about}</p>
+			<Tag label={project.type.title} color={project.type.color} />
+			<p className="text-white my-4">{project.about}</p>
 			<div className="flex mt-8 md:mt-12">
-				<NavButton className="px-8 py-4" href="#">Read More</NavButton>
-				<div className="hidden sm:flex mx-2 px-4 bg-primary rounded-lg flex-grow items-center justify-evenly">
-					{svg.map((icon) => (
+				<NavButton className="px-8 py-4" href="#">
+					Read More
+				</NavButton>
+				<div className="hidden sm:flex mx-2 px-4 bg-primary rounded-lg flex-grow items-center justify-evenly shadow-2xl">
+					{project.svg.map((icon) => (
 						<Icon key={icon} svg={icon} />
 					))}
 				</div>

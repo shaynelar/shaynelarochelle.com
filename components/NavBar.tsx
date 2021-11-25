@@ -12,9 +12,7 @@ import Heading from "./Heading";
 function NavBar() {
 	return (
 		<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
-			<Heading className="text-2xl font-bold text-white">
-				Shayne LaRochelle
-			</Heading>
+			<Heading className="text-2xl font-bold text-white">Shayne LaRochelle</Heading>
 			<nav>
 				<ul className="flex">
 					<li className="hidden md:block m-2 ">
@@ -63,7 +61,7 @@ function MobileMenu() {
 					const state = isExpanded ? "open" : "closed";
 					return (
 						<>
-							<MenuButton className="inline-flex items-center justify-center p-1 transition border-2 w-14 h-14 focus:outline-none rounded-full">
+							<MenuButton className="inline-flex items-center justify-center p-1 transition bg-white text-dark w-14 h-14 focus:outline-none rounded-full ">
 								<svg
 									width="32"
 									height="32"
@@ -128,7 +126,7 @@ const MobileMenuList = () => {
 						right: 0,
 					})}
 					style={{ display: "block" }}
-					className="z-50"
+					className="z-50 overflow-hidden "
 				>
 					<motion.div
 						initial={{ x: -50, opacity: 0 }}
@@ -138,9 +136,9 @@ const MobileMenuList = () => {
 							duration: 0.3,
 							ease: "linear",
 						}}
-						className="flex flex-col h-full pb-12 border-t border-gray-200 w-screen z-10 bg-primary"
+						className="flex flex-col h-full py-12 border-t border-gray-200 w-screen z-10 bg-primary overflow-hidden "
 					>
-						<ul className="flex flex-col z-10">
+						<ul className="flex flex-col z-10 gap-4">
 							<MobileMenuButton>Home</MobileMenuButton>
 							<MobileMenuButton>About</MobileMenuButton>
 							<MobileMenuButton>Projects</MobileMenuButton>
