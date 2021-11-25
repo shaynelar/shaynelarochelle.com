@@ -10,7 +10,7 @@ function FlexContainer(
 		);
 	} else {
 		return (
-			<div className={`flex justify-center items-center ${props.className}`}>
+			<div className={`flex justify-center items-center`} {...props}>
 				{props.children}
 			</div>
 		);
