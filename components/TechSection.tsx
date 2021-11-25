@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./Container";
+import FlexContainer from "./FlexContainer";
 import {
 	SiTypescript,
 	SiJavascript,
@@ -16,9 +16,14 @@ import Heading from "./Heading";
 
 function TechSection() {
 	return (
-		<Container as="section" className="flex flex-col  hero bg-primary">
-            <Heading className="text-2xl text-center font-bold">Tech I've been working with recently</Heading>
-			<div className="flex flex-wrap justify-center">
+		<FlexContainer
+			as="section"
+			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40"
+		>
+			<Heading className="text-2xl text-white text-center font-bold my-8">
+				Tech I've been working with recently
+			</Heading>
+			<div className="flex flex-wrap justify-center ">
 				<TechBadge label="TypeScript" svg={SiTypescript} />
 				<TechBadge label="JavaScript" svg={SiJavascript} />
 				<TechBadge label="React" svg={SiReact} />
@@ -26,10 +31,10 @@ function TechSection() {
 				<TechBadge label="Python" svg={SiPython} />
 				<TechBadge label="Next.JS" svg={SiNextdotjs} />
 				<TechBadge label="CSS3" svg={SiCss3} />
-				<TechBadge label="SASS" svg={SiSass} />
+				<TechBadge label="SCSS" svg={SiSass} />
 				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
 			</div>
-		</Container>
+		</FlexContainer>
 	);
 }
 

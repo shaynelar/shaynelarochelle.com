@@ -1,4 +1,4 @@
-function Container(
+function FlexContainer(
 	props: React.HTMLAttributes<HTMLDivElement> & { as?: string }
 ) {
 	if (props.as) {
@@ -17,4 +17,4 @@ function Container(
 	}
 }
 
-export default Container;
+export default FlexContainer;

@@ -1,22 +1,16 @@
 import React from "react";
-import Container from "./Container";
+import FlexContainer from "./FlexContainer";
 import Heading from "./Heading";
 
 const AboutSection = () => {
 	return (
 		<section>
-			<Container
+			<FlexContainer
 				as="article"
-				className="hero bg-primary p-2 flex-col flex 2xl:px-96 xl:px-60 md:px-10 px-4 justify-center items-center align-center py-10  border-b border-blue-500"
+				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
 			>
-				<Heading className="text-4xl">About Me</Heading>
-				<div className="">
-					<img
-						src="/myself.jpg"
-						className="rounded-sm h-44 float-right ml-4 lg:h-80 rounded-2xl"
-						alt="Image of Shayne"
-					/>
-
+				<Heading className="text-4xl text-white font-semibold mb-8">About Me</Heading>
+				<div className="flex flex-col md:flex-row md:gap-4 text-white">
 					<p className="text-left md:text-lg sm:text-md">
 						{" "}
 						Hi, I'm Shayne! My interest in programming started in high school,
@@ -30,45 +24,13 @@ const AboutSection = () => {
 						Currently, I spend most of my free time building full stack projects
 						and expanding my knowledge of new technologies.{" "}
 					</p>
+					<img
+						src="/myself.jpg"
+						className="md:h-60 lg:h-96 rounded-2xl"
+						alt="Picture of Shayne"
+					/>
 				</div>
-				<h1 className="mt-8 mb-4">
-					<span className="md:text-xl sm:text-lg font-bold">
-						Tech I've Been Working With Recently:
-					</span>
-				</h1>
-				<div className="flex flex-row space-x-10 md:px-0 px-4">
-					<ul className="list-disc md:list-inside">
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">TypeScript</span>
-						</li>
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">JavaScript</span>
-						</li>
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">Python</span>
-						</li>
-					</ul>
-					<ul className="list-disc md:list-inside">
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">React</span>
-						</li>
-
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">Next.Js</span>
-						</li>
-					</ul>
-					<ul className="list-disc md:list-inside">
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">GraphQL</span>
-						</li>
-						<li className="text-blue-500">
-							<span className="md:text-lg sm:text-md">
-								AWS (Lambda, API Gateway, RDS, S3)
-							</span>
-						</li>
-					</ul>
-				</div>
-			</Container>
+			</FlexContainer>
 		</section>
 	);
 };

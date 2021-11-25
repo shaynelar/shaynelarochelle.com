@@ -10,23 +10,20 @@ import { MobileMenuButton, NavButton } from "./Button";
 
 function NavBar() {
 	return (
-		<>
-			<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
-				<h1 className="text-xl font-bold">Shayne LaRochelle</h1>
-
-				<nav>
-					<ul className="flex">
-						<li className="hidden md:block m-2 ">
-							<NavButton href="#">Home</NavButton>
-						</li>
-						<li className="hidden md:block m-2">
-							<NavButton href="#">About</NavButton>
-						</li>
-					</ul>
-					<MobileMenu />
-				</nav>
-			</header>
-		</>
+		<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
+			<h1 className="text-xl font-bold">Shayne LaRochelle</h1>
+			<nav>
+				<ul className="flex">
+					<li className="hidden md:block m-2 ">
+						<NavButton href="#">Home</NavButton>
+					</li>
+					<li className="hidden md:block m-2">
+						<NavButton href="#">About</NavButton>
+					</li>
+				</ul>
+				<MobileMenu />
+			</nav>
+		</header>
 	);
 }
 export default NavBar;
@@ -48,13 +45,13 @@ const bottomVariants = {
 
 function MobileMenu() {
 	return (
-		<div className="md:hidden ">
+		<div className="md:hidden">
 			<Menu>
 				{({ isExpanded }) => {
 					const state = isExpanded ? "open" : "closed";
 					return (
 						<>
-							<MenuButton className="inline-flex items-center justify-center p-1 transition border-2 w-14 h-14 focus:outline-none ">
+							<MenuButton className="inline-flex items-center justify-center p-1 transition border-2 w-14 h-14 focus:outline-none rounded-full">
 								<svg
 									width="32"
 									height="32"

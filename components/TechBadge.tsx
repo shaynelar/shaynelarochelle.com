@@ -8,8 +8,8 @@ interface Props {
 
 function TechBadge({ svg, label }: Props) {
 	return (
-		<div className="border border-white p-4 rounded-2xl m-2 flex  items-center">
-			{svg({ className: "text-blue-200 text-4xl" })}
+		<div className="border border-white p-4 rounded-2xl m-2 flex  items-center bg-dark">
+			{svg({ className: "text-blue-200 text-3xl md:text-4xl" })}
 			<span className="text-white ml-4">{label}</span>
 		</div>
 	);

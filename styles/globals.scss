@@ -25,15 +25,29 @@ a {
 }
 
 .button {
-	transition: 0.3s;
+	transition: 0.2s;
 	&:hover {
 		background-color: black;
 		color: white;
-		opacity: 0.8;
 	}
 }
 
 .splatter {
 	background-image: url("../public/polygon-scatter-haikei.svg");
 	object-fit: contain;
+}
+
+.card-shadow {
+	-webkit-box-shadow: 5px 5px 12px 8px #b5b5b5;
+	box-shadow: 5px 5px 12px 8px #b5b5b5;
+}
+
+.card {
+	transition: 0.3s;
+	border: 1px solid transparent;
+	&:hover {
+		border: 1px solid white;
+		background-color: black;
+		transform: scale(1.05);
+	}
 }
