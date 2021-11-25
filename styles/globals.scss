@@ -20,7 +20,7 @@ a {
 	margin: 0;
 }
 
-.hero-height {
+.hero {
 	height: calc(100vh - 5.5rem);
 }
 
@@ -31,4 +31,9 @@ a {
 		color: white;
 		opacity: 0.8;
 	}
+}
+
+.splatter {
+	background-image: url("../public/polygon-scatter-haikei.svg");
+	object-fit: contain;
 }

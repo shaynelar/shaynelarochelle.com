@@ -1,20 +1,25 @@
 import Container from "./Container";
 import Heading from "./Heading";
 
-const HeroSection = () => {
+function HeroSection() {
 	return (
-		<section className="">
-			<Container>
-				<div className="flex flex-col">
-					<Heading className="text-5xl font-bold">Shayne LaRochelle</Heading>
-					<p className="mt-4 text-xl">
-						I am a Software Developer with experience designing, developing and
-						deploying full-stack applications.
-					</p>
+		<section>
+			<Container className="hero bg-primary p-2">
+				<div className="flex flex-col lg:flex-row">
+					<div>
+						<Heading className="2xl:text-8xl lg:text-7xl text-5xl font-bold text-gray-200">
+							Shayne LaRochelle
+						</Heading>
+						<p className=" md:text-xl text-lg mt-2 mb-10 font-semibold md:max-w-2xl max-w-md block">
+							I'm a Professional Golfer turned Software Developer with
+							experience designing, developing and deploying full-stack
+							applications.
+						</p>
+					</div>
 				</div>
 			</Container>
 		</section>
 	);
-};
+}
 
 export default HeroSection;

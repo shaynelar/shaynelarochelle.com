@@ -1,32 +1,23 @@
-import Link from "next/link";
 import {
 	Menu,
 	MenuButton,
 	MenuPopover,
 	useMenuButtonContext,
 } from "@reach/menu-button";
-import {
-	AnimatePresence,
-	motion,
-	useAnimation,
-	useReducedMotion,
-} from "framer-motion";
-import React, { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 import { MobileMenuButton, NavButton } from "./Button";
 
-
-const NavBar = () => {
+function NavBar() {
 	return (
 		<>
-			<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center">
+			<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
 				<h1 className="text-xl font-bold">Shayne LaRochelle</h1>
 
 				<nav>
 					<ul className="flex">
 						<li className="hidden md:block m-2 ">
-							<NavButton href="#">
-								Home
-							</NavButton>
+							<NavButton href="#">Home</NavButton>
 						</li>
 						<li className="hidden md:block m-2">
 							<NavButton href="#">About</NavButton>
@@ -37,10 +28,8 @@ const NavBar = () => {
 			</header>
 		</>
 	);
-};
+}
 export default NavBar;
-
-
 
 const topVariants = {
 	open: { rotate: 45, y: 7 },
@@ -133,16 +122,16 @@ const MobileMenuList = () => {
 					className="z-50"
 				>
 					<motion.div
-						initial={{ y: -50, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						exit={{ y: -50, opacity: 0 }}
+						initial={{ x: -50, opacity: 0 }}
+						animate={{ x: 0, opacity: 1 }}
+						exit={{ x: -50, opacity: 0 }}
 						transition={{
 							duration: 0.3,
 							ease: "linear",
 						}}
-						className="flex flex-col h-full pb-12 border-t border-gray-200 w-screen"
+						className="flex flex-col h-full pb-12 border-t border-gray-200 w-screen z-10 bg-primary"
 					>
-						<ul className="flex flex-col">
+						<ul className="flex flex-col z-10">
 							<MobileMenuButton>Home</MobileMenuButton>
 							<MobileMenuButton>About</MobileMenuButton>
 							<MobileMenuButton>Projects</MobileMenuButton>
@@ -154,5 +143,3 @@ const MobileMenuList = () => {
 		</AnimatePresence>
 	);
 };
-
-
