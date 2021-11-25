@@ -6,7 +6,7 @@ export function NavButton(props: AnchorProps) {
 	return (
 		<Link href={props.href!} passHref>
 			<a
-				className="inline-block p-4 px-8 bg-white border border-gray-900 rounded-full button items-center"
+				className="inline-block py-2 px-4 lg:py-4 lg:px-8 bg-white  rounded-full nav-button items-center font-semibold"
 				{...props}
 			/>
 		</Link>
@@ -25,6 +25,9 @@ export function MobileMenuButton(
 
 export function ActionButton(props: React.HTMLAttributes<HTMLButtonElement>) {
 	return (
-		<button className="p-6 my-6 border-2 rounded-full bg-white button" {...props} />
+		<button
+			className="p-6 my-6 border-2 rounded-full bg-white button"
+			{...props}
+		/>
 	);
 }

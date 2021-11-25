@@ -22,8 +22,10 @@ function ProjectCard({ title, about, image }: Props) {
 				{title}
 			</Heading>
 			<p className="text-white my-4">{about}</p>
-
-			<NavButton href="#">Read More</NavButton>
+			<div className="flex">
+				<NavButton href="#">Read More</NavButton>
+				<div className="hidden md:block bg-red-300 flex-grow"></div>
+			</div>
 		</div>
 	);
 }

@@ -51,3 +51,11 @@ a {
 		transform: scale(1.05);
 	}
 }
+
+.footer {
+	min-height: 50vh;
+}
+
+.nav-button {
+	@extend .button;
+}

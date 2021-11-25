@@ -9,7 +9,9 @@ const AboutSection = () => {
 				as="article"
 				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
 			>
-				<Heading className="text-4xl text-white font-semibold mb-8">About Me</Heading>
+				<Heading className="text-5xl text-white font-semibold mb-8">
+					About Me
+				</Heading>
 				<div className="flex flex-col md:flex-row md:gap-4 text-white">
 					<p className="text-left md:text-lg sm:text-md">
 						{" "}
@@ -26,7 +28,7 @@ const AboutSection = () => {
 					</p>
 					<img
 						src="/myself.jpg"
-						className="md:h-60 lg:h-96 rounded-2xl"
+						className="md:h-60 lg:h-96 rounded-2xl mt-10 md:mt-0"
 						alt="Picture of Shayne"
 					/>
 				</div>
