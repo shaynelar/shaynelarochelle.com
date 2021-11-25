@@ -5,7 +5,10 @@ import Heading from "./Heading";
 const AboutSection = () => {
 	return (
 		<section>
-			<Container className="hero bg-primary p-2 flex-col flex 2xl:px-96 xl:px-60 md:px-10 px-4 justify-center items-center align-center py-10  border-b border-blue-500">
+			<Container
+				as="article"
+				className="hero bg-primary p-2 flex-col flex 2xl:px-96 xl:px-60 md:px-10 px-4 justify-center items-center align-center py-10  border-b border-blue-500"
+			>
 				<Heading className="text-4xl">About Me</Heading>
 				<div className="">
 					<img
