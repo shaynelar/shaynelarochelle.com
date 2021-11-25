@@ -20,6 +20,7 @@ function ProjectSection() {
 						title={project.title}
 						about={project.about}
 						image={project.image}
+						svg={project.svg}
 					/>
 				))}
 			</div>

@@ -7,11 +7,14 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { MobileMenuButton, NavButton } from "./Button";
+import Heading from "./Heading";
 
 function NavBar() {
 	return (
 		<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
-			<h1 className="text-xl font-bold">Shayne LaRochelle</h1>
+			<Heading className="text-2xl font-bold text-white">
+				Shayne LaRochelle
+			</Heading>
 			<nav>
 				<ul className="flex">
 					<li className="hidden md:block m-2 ">

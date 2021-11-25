@@ -6,8 +6,8 @@ export function NavButton(props: AnchorProps) {
 	return (
 		<Link href={props.href!} passHref>
 			<a
-				className="inline-block py-2 px-4 lg:py-4 lg:px-8 bg-white  rounded-full nav-button items-center font-semibold"
 				{...props}
+				className={`inline-block py-2 px-4 lg:py-4 lg:px-8 bg-white  rounded-full nav-button items-center font-semibold ${props.className}`}
 			/>
 		</Link>
 	);
