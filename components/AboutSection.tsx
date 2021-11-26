@@ -6,6 +6,7 @@ const AboutSection = () => {
 	return (
 		<section>
 			<FlexContainer
+				id="about"
 				as="article"
 				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
 			>

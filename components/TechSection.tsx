@@ -18,12 +18,12 @@ function TechSection() {
 	return (
 		<FlexContainer
 			as="section"
-			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40"
+			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40 "
 		>
 			<Heading className="text-2xl text-white text-center font-bold my-8">
 				Tech I've been working with recently
 			</Heading>
-			<div className="flex flex-wrap justify-center ">
+			<div className="flex flex-wrap justify-center max-w-5xl">
 				<TechBadge label="TypeScript" svg={SiTypescript} />
 				<TechBadge label="JavaScript" svg={SiJavascript} />
 				<TechBadge label="React" svg={SiReact} />

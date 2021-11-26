@@ -7,6 +7,7 @@ import ProjectCard from "./ProjectCard";
 function ProjectSection() {
 	return (
 		<FlexContainer
+			id="projects"
 			as="section"
 			className="flex flex-col min-h-screen bg-primary p-4"
 		>

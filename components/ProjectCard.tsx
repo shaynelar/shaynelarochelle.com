@@ -23,7 +23,7 @@ function ProjectCard({ project }: Props) {
 	return (
 		<div
 			id={`${project.title}-card`}
-			className="p-12 rounded-2xl bg-dark shadow-2xl shadow-xl max-w-2xl"
+			className="p-8 md:p-12 rounded-2xl bg-dark shadow-2xl shadow-xl max-w-2xl"
 		>
 			{/* <img className="object-contain absolute top-0" src={image} /> */}
 

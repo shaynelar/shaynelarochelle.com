@@ -4,7 +4,7 @@ import Heading from "./Heading";
 
 function HeroSection() {
 	return (
-		<FlexContainer as="section" className="hero bg-primary p-2">
+		<FlexContainer id="home" as="section" className="hero bg-primary p-2">
 			<div className="flex flex-col lg:flex-row">
 				<div>
 					<Heading className="2xl:text-8xl lg:text-7xl text-5xl font-bold text-blue-200">

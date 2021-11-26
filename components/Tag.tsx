@@ -8,7 +8,7 @@ export default function Tag(
 		<span
 			key={props.label}
 			{...props}
-			className={`inline-block rounded-full py-2 px-4 font-semibold text-white shadow-2xl bg-${props.color} ${props.className}`}
+			className={`text-sm lg:text-lg inline-block text-center rounded-full py-2 px-4 font-semibold text-white shadow-2xl bg-${props.color} ${props.className}`}
 		>
 			#{props.label}
 		</span>

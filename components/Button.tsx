@@ -8,7 +8,7 @@ export function NavButton(props: AnchorProps & MotionProps) {
 		<Link href={props.href!} passHref>
 			<motion.a
 				{...props}
-				className={`inline-block py-2 px-4 lg:py-4 lg:px-8 bg-white  rounded-full nav-button items-center font-semibold ${props.className}`}
+				className={`inline-block py-2 px-4 lg:py-4 lg:px-8 text-gray-300 text-xl nav-button items-center font-semibold  ${props.className}`}
 				whileTap={{ scale: 0.8 }}
 			/>
 		</Link>
@@ -31,7 +31,6 @@ export function ActionButton(props: React.HTMLAttributes<HTMLButtonElement>) {
 		/>
 	);
 }
-
 
 export function FooterButton(props: AnchorProps) {
 	return (

@@ -5,23 +5,23 @@ import MobileMenu from "./MobileMenu";
 
 function NavBar() {
 	return (
-		<header className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
+		<header id="nav" className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
 			<Heading className="text-2xl font-bold text-white">
 				Shayne LaRochelle
 			</Heading>
 			<nav>
 				<ul className="flex">
 					<li className="hidden md:block m-2 ">
-						<NavButton href="#">Home</NavButton>
+						<NavButton href="#nav">Home</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#">About</NavButton>
+						<NavButton href="#about">About</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#">Projects</NavButton>
+						<NavButton href="#projects">Projects</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#">Blog</NavButton>
+						<NavButton href="#blog">Blog</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
 						<NavButton href="#">Resume</NavButton>
