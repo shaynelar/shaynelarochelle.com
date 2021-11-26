@@ -52,7 +52,7 @@
     },
     {
         "title": "Investigating the Efficient Market Hypothesis",
-        "about": "An academic paper and machine learning model investigating the validity of the Efficient Market Hypothesis as it applies to the 10 year histories of three companies stock.",
+        "about": "Academic paper and machine learning model investigating the validity of the Efficient Market Hypothesis as it applies to  three companies stock.",
         "image": "/emh.jpg",
         "type": {
             "title": "Machine Learning",

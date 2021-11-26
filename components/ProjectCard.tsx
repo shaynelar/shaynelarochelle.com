@@ -27,20 +27,20 @@ function ProjectCard({ project }: Props) {
 		>
 			{/* <img className="object-contain absolute top-0" src={image} /> */}
 
-			<Heading className="text-3xl font-semibold text-white my-8">
-				{project.title}
+			<Heading className="text-3xl font-semibold text-gray-100 my-8 lg:text-4xl ">
+				<a
+					className="transition duration-150 ease-in-out hover:underline"
+					href="#"
+				>
+					{project.title}
+				</a>
 			</Heading>
 			<Tag label={project.type.title} color={project.type.color} />
-			<p className="text-white my-4">{project.about}</p>
-			<div className="flex mt-8 md:mt-12">
-				<NavButton className="px-8 py-4" href="#">
-					Read More
-				</NavButton>
-				<div className="hidden sm:flex mx-2 px-4 bg-primary rounded-lg flex-grow items-center justify-evenly shadow-2xl">
-					{project.svg.map((icon) => (
-						<Icon key={icon} svg={icon} />
-					))}
-				</div>
+			<p className="text-gray-200 my-8 lg:text-xl">{project.about}</p>
+			<div className="hidden sm:flex mb-4 p-4 bg-primary rounded-lg flex-grow items-center justify-evenly shadow-2xl">
+				{project.svg.map((icon) => (
+					<Icon key={icon} svg={icon} />
+				))}
 			</div>
 		</div>
 	);

@@ -5,7 +5,7 @@ import React from "react";
 type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
 export function NavButton(props: AnchorProps & MotionProps) {
 	return (
-		<Link href={props.href} passHref>
+		<Link href={props.href!} passHref>
 			<motion.a
 				{...props}
 				className={`inline-block py-2 px-4 lg:py-4 lg:px-8 bg-white  rounded-full nav-button items-center font-semibold ${props.className}`}
@@ -15,16 +15,11 @@ export function NavButton(props: AnchorProps & MotionProps) {
 	);
 }
 
-export function MobileMenuButton(
-	props: React.HTMLAttributes<HTMLAnchorElement>
-) {
+export function MobileMenuButton(props: AnchorProps) {
 	return (
-		<motion.li
-			whileTap={{ scale: 0.95 }}
-			className="mx-4 text-center text-dark rounded-xl cursor-pointer text-xl font-bold p-6 bg-white  z-10"
-		>
+		<li className="text-center  w-full cursor-pointer text-xl font-bold p-4 text-white z-10 border-gray-100 border-b hover:bg-dark">
 			<a {...props} />
-		</motion.li>
+		</li>
 	);
 }
 
@@ -34,5 +29,16 @@ export function ActionButton(props: React.HTMLAttributes<HTMLButtonElement>) {
 			className="p-6 my-6 border-2 rounded-full bg-white button"
 			{...props}
 		/>
+	);
+}
+
+
+export function FooterButton(props: AnchorProps) {
+	return (
+		<li>
+			<a href={props.href!} className="text-gray-200 text-lg hover:text-white">
+				{props.children}
+			</a>
+		</li>
 	);
 }

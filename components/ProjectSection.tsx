@@ -13,7 +13,7 @@ function ProjectSection() {
 			<Heading className="text-5xl text-center  font-bold text-white my-8">
 				Projects
 			</Heading>
-			<div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-4">
+			<div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-4 lg:gap-6">
 				{data.map((project) => (
 					<ProjectCard key={project.title} project={project} />
 				))}

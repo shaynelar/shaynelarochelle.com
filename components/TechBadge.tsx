@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
+import dynamic, { LoaderComponent } from "next/dynamic";
 import React, { Component, useEffect, useLayoutEffect, useState } from "react";
-import { IconType } from "react-icons";
+import { IconBaseProps, IconType } from "react-icons";
 
 interface Props {
 	svg: IconType;
@@ -9,7 +9,7 @@ interface Props {
 
 function TechBadge({ svg, label }: Props) {
 	return (
-		<div className="border-2 border-gray-200 p-4 rounded-2xl m-2 flex  items-center bg-dark shadow-2xl">
+		<div className="border-2 border-blue-300 p-4 rounded-2xl m-2 flex  items-center bg-dark shadow-2xl ">
 			{svg({ className: "text-blue-200 text-3xl md:text-4xl" })}
 			<span className="text-white ml-4">{label}</span>
 		</div>
@@ -19,8 +19,11 @@ function TechBadge({ svg, label }: Props) {
 export default TechBadge;
 
 export function Icon({ svg }: { svg: string }) {
-	const Icon = dynamic(() =>
-		import("react-icons/si").then((item) => item[svg])
+	const Icon = dynamic(
+		() =>
+			import("react-icons/si").then(
+				(item) => item[svg]
+			) as LoaderComponent<IconBaseProps>
 	);
 
 	return <Icon className="text-blue-200 text-2xl md:text-3xl mx-2" />;
