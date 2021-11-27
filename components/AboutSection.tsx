@@ -1,20 +1,20 @@
 import React from "react";
-import FlexContainer from "./FlexContainer";
+import Layout from "./Layout";
 import Heading from "./Heading";
 
 const AboutSection = () => {
 	return (
 		<section>
-			<FlexContainer
+			<Layout
 				id="about"
 				as="article"
 				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
 			>
-				<Heading className="text-5xl text-white font-semibold mb-8">
+				<Heading className="text-5xl lg:text-6xl text-white font-semibold mb-8 lg:my-12">
 					About Me
 				</Heading>
 				<div className="flex flex-col md:flex-row md:gap-4 text-white">
-					<p className="text-left md:text-lg sm:text-md">
+					<p className="text-left md:text-lg sm:text-md lg:text-2xl ">
 						{" "}
 						Hi, I'm Shayne! My interest in programming started in high school,
 						and developed further as I studied finance in university with the
@@ -33,7 +33,7 @@ const AboutSection = () => {
 						alt="Picture of Shayne"
 					/>
 				</div>
-			</FlexContainer>
+			</Layout>
 		</section>
 	);
 };

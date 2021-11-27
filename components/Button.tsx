@@ -17,7 +17,7 @@ export function NavButton(props: AnchorProps & MotionProps) {
 
 export function MobileMenuButton(props: AnchorProps) {
 	return (
-		<li className="text-center  w-full cursor-pointer text-xl font-bold p-4 text-white z-10 border-gray-100 border-b hover:bg-dark">
+		<li className="text-center  w-full cursor-pointer text-xl font-bold p-4 text-gray-200 z-10 border-dark border-b hover:bg-primary">
 			<a {...props} />
 		</li>
 	);
@@ -35,7 +35,7 @@ export function ActionButton(props: React.HTMLAttributes<HTMLButtonElement>) {
 export function FooterButton(props: AnchorProps) {
 	return (
 		<li>
-			<a href={props.href!} className="text-gray-200 text-lg hover:text-white">
+			<a href={props.href!} className="text-gray-300 text-lg hover:text-white md:text-xl lg:text-2xl">
 				{props.children}
 			</a>
 		</li>

@@ -1,5 +1,5 @@
 import React from "react";
-import FlexContainer from "./FlexContainer";
+import Layout from "./Layout";
 import {
 	SiTypescript,
 	SiJavascript,
@@ -16,11 +16,11 @@ import Heading from "./Heading";
 
 function TechSection() {
 	return (
-		<FlexContainer
+		<Layout
 			as="section"
 			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40 "
 		>
-			<Heading className="text-2xl text-white text-center font-bold my-8">
+			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
 				Tech I've been working with recently
 			</Heading>
 			<div className="flex flex-wrap justify-center max-w-5xl">
@@ -34,7 +34,7 @@ function TechSection() {
 				<TechBadge label="SCSS" svg={SiSass} />
 				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
 			</div>
-		</FlexContainer>
+		</Layout>
 	);
 }
 

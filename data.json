@@ -14,7 +14,8 @@
             "SiNodedotjs",
             "SiGraphql",
             "SiAmazonaws"
-        ]
+        ],
+        "url": "/projects/jobrium"
     },
     {
         "title": "TS-Chat",
@@ -32,7 +33,8 @@
             "SiNodedotjs",
             "SiApollographql",
             "SiGraphql"
-        ]
+        ],
+        "url": "/projects/ts-chat"
     },
     {
         "title": "Friends of Japan",
@@ -49,7 +51,8 @@
             "SiPython",
             "SiDjango",
             "SiAmazonaws"
-        ]
+        ],
+        "url": "/projects/friendsofjapan"
     },
     {
         "title": "Investigating the Efficient Market Hypothesis",
@@ -65,7 +68,8 @@
             "SiTensorflow",
             "SiScikitlearn",
             "SiPandas"
-        ]
+        ],
+        "url": "https://github.com/lockedNLevered/EfficientMarketTestML"
     },
     {
         "title": "Predicting Credit Default",
@@ -80,6 +84,7 @@
             "SiJupyter",
             "SiScikitlearn",
             "SiPandas"
-        ]
+        ],
+        "url": "https://github.com/lockedNLevered/PredictingCreditDefaultML"
     }
 ]

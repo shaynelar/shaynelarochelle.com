@@ -1,14 +1,20 @@
-import FlexContainer from "./FlexContainer";
+import Layout from "./Layout";
 import Tag from "./Tag";
 interface Props {
 	title: string;
 	tags: string[];
+	url: string;
 }
 
-export default function BlogCard({ title, tags }: Props) {
+export default function BlogCard({ title, tags, url }: Props) {
 	return (
-		
-		<FlexContainer as="a" href="#" className="blog-card flex-col justify-center sm:justify-between p-12 shadow-2xl w-full p-8 rounded-3xl bg-gradient-to-bl from-green-400 via-green-500 to-blue-800 max-w-lg h-80">
+		<Layout
+			as="a"
+			href={url}
+			target="_blank"
+			rel="noreferrer"
+			className="blog-card flex-col justify-center sm:justify-between p-12 shadow-2xl w-full p-8 rounded-3xl bg-gradient-to-bl from-green-400 via-green-500 to-blue-800 max-w-lg h-80"
+		>
 			<h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl">
 				{title}
 			</h1>
@@ -18,6 +24,6 @@ export default function BlogCard({ title, tags }: Props) {
 					<Tag className="md:mx-4" key={tag} label={tag} color="dark" />
 				))}
 			</div>
-		</FlexContainer>
+		</Layout>
 	);
 }

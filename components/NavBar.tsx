@@ -12,19 +12,19 @@ function NavBar() {
 			<nav>
 				<ul className="flex">
 					<li className="hidden md:block m-2 ">
-						<NavButton href="#nav">Home</NavButton>
+						<NavButton href="/#nav">Home</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#about">About</NavButton>
+						<NavButton href="/#about">About</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#projects">Projects</NavButton>
+						<NavButton href="/#projects">Projects</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#blog">Blog</NavButton>
+						<NavButton href="/#blog">Blog</NavButton>
 					</li>
 					<li className="hidden md:block m-2">
-						<NavButton href="#">Resume</NavButton>
+						<NavButton href="/#">Resume</NavButton>
 					</li>
 				</ul>
 				<MobileMenu />

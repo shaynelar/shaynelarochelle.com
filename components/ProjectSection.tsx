@@ -1,17 +1,17 @@
 import React from "react";
-import FlexContainer from "./FlexContainer";
+import Layout from "./Layout";
 import Heading from "./Heading";
 import data from "../data.json";
 import ProjectCard from "./ProjectCard";
 
 function ProjectSection() {
 	return (
-		<FlexContainer
+		<Layout
 			id="projects"
 			as="section"
-			className="flex flex-col min-h-screen bg-primary p-4"
+			className="flex flex-col min-h-screen  p-4"
 		>
-			<Heading className="text-5xl text-center  font-bold text-white my-8">
+			<Heading className="text-5xl lg:text-6xl text-white font-semibold mb-8 lg:my-12">
 				Projects
 			</Heading>
 			<div className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-4 lg:gap-6">
@@ -19,7 +19,7 @@ function ProjectSection() {
 					<ProjectCard key={project.title} project={project} />
 				))}
 			</div>
-		</FlexContainer>
+		</Layout>
 	);
 }
 

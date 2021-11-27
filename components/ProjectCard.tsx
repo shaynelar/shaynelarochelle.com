@@ -1,10 +1,8 @@
 import React from "react";
-import { SiTypescript } from "react-icons/si";
-import { ActionButton, NavButton } from "./Button";
 import Heading from "./Heading";
-import TechBadge, { Icon } from "./TechBadge";
-import dynamic from "next/dynamic";
+import { Icon } from "./TechBadge";
 import Tag from "./Tag";
+import Link from "next/link";
 
 interface Props {
 	project: {
@@ -16,6 +14,7 @@ interface Props {
 			color: string;
 		};
 		svg: string[];
+		url: string;
 	};
 }
 
@@ -28,12 +27,14 @@ function ProjectCard({ project }: Props) {
 			{/* <img className="object-contain absolute top-0" src={image} /> */}
 
 			<Heading className="text-3xl font-semibold text-gray-100 my-8 lg:text-4xl ">
-				<a
-					className="transition duration-150 ease-in-out hover:underline"
-					href="#"
-				>
-					{project.title}
-				</a>
+				<Link href={project.url}>
+					<a
+						className="transition duration-150 ease-in-out hover:underline"
+						href={project.url}
+					>
+						{project.title}
+					</a>
+				</Link>
 			</Heading>
 			<Tag label={project.type.title} color={project.type.color} />
 			<p className="text-gray-200 my-8 lg:text-xl">{project.about}</p>
