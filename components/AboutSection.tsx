@@ -31,6 +31,8 @@ const AboutSection = () => {
 						src="/myself.jpg"
 						className="md:h-60 lg:h-96 rounded-2xl mt-10 md:mt-0"
 						alt="Picture of Shayne"
+						width="800px"
+						height="800px"
 					/>
 				</div>
 			</Layout>
