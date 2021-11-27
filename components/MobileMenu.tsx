@@ -124,7 +124,7 @@ function MobileMenuList() {
 								onClick={() => {
 									lockBody();
 								}}
-								href="#nav"
+								href="/#nav"
 							>
 								Home
 							</MobileMenuButton>
@@ -132,7 +132,7 @@ function MobileMenuList() {
 								onClick={() => {
 									lockBody();
 								}}
-								href="#about"
+								href="/#about"
 							>
 								About
 							</MobileMenuButton>
@@ -140,7 +140,7 @@ function MobileMenuList() {
 								onClick={() => {
 									lockBody();
 								}}
-								href="#projects"
+								href="/#projects"
 							>
 								Projects
 							</MobileMenuButton>

@@ -8,6 +8,7 @@ import { promises as fs } from "fs";
 import { IProjects } from "../../utils/types";
 import TechBadge, { Icon } from "../../components/TechBadge";
 import { IconType } from "react-icons";
+import { NavButton } from "../../components/Button";
 
 const Project = ({ projects }: { projects: IProjects[] }) => {
 	const router = useRouter();
@@ -23,13 +24,25 @@ const Project = ({ projects }: { projects: IProjects[] }) => {
 
 			<Layout
 				as="section"
-				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4"
+				className="min-h-screen bg-primary p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
 			>
-				<Heading className="text-white">{pageData.about.title}</Heading>
-				<p>{pageData.about.description}</p>
-				<StackSection title="Client" tech={pageData.about.tech.client} />
-				<StackSection title="Client" tech={pageData.about.tech.server} />
-				<StackSection title="Client" tech={pageData.about.tech.deployment} />
+				<Heading className="text-white lg:text-5xl">{pageData.about.title}</Heading>
+				{pageData.about.url ? (
+					<NavButton target="_blank" href={`https://${pageData.about.url}`}>
+						{pageData.about.url}
+					</NavButton>
+				) : (
+					<p>Offline</p>
+				)}
+				<p className="text-gray-200">{pageData.about.description}</p>
+				<div className="bg-dark rounded-xl p-4 flex flex-col gap-6 w-full items-center">
+					<StackSection title="Client" tech={pageData.about.tech.client} />
+					<StackSection title="Server" tech={pageData.about.tech.server} />
+					<StackSection
+						title="Deployment"
+						tech={pageData.about.tech.deployment}
+					/>
+				</div>
 				<BlogSection title="What I Learned" items={pageData.learned} />
 				<BlogSection
 					title="Things that we're tough"
@@ -85,9 +98,9 @@ function StackSection({
 	tech: { name: string; icon: string }[];
 }) {
 	return (
-		<div className="flex flex-col items-center gap-2">
-			<h2 className="text-white text-xl">{title}</h2>
-			<div className="flex justify-between">
+		<div className="flex flex-col  gap-2">
+			<div className="flex justify-between items-center">
+				<h2 className="text-white text-2xl">{title}</h2>
 				{tech.map((item, id) => (
 					<Icon key={item.name + id} svg={item.icon} />
 				))}
@@ -98,12 +111,16 @@ function StackSection({
 
 function BlogSection({ title, items }: { title: string; items: string[] }) {
 	return (
-		<section>
-			<h2 className="text-white text-2xl lg:text-4xl">{title}</h2>
+		<section className="self-stretch">
+			<h2 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold my-10">
+				{title}
+			</h2>
 			{items.map((item) => (
 				<ul key={item}>
-					<li>
-						<p className="text-gray-200">{item}</p>
+					<li className="list-disc text-gray-300">
+						<p className="text-gray-300 font-semibold text-lg lg:text-xl leading-10  my-4">
+							{item}
+						</p>
 					</li>
 				</ul>
 			))}
