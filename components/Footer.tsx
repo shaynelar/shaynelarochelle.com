@@ -1,4 +1,3 @@
-import Layout from "./Layout";
 import Heading from "./Heading";
 import { SiGithub, SiLinkedin, SiStackoverflow } from "react-icons/si";
 import { FooterButton } from "./Button";

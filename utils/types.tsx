@@ -1,3 +1,10 @@
+import { IconType } from "react-icons";
+
+interface IStack {
+    name: string;
+    icon: keyof IconType;
+}
+
 interface Project {
 	about: {
 		title: string;
@@ -5,9 +12,9 @@ interface Project {
 		url: string;
 		slug: string;
 		tech: {
-			client: string[];
-			server: string[];
-			deployment: string[];
+			client: IStack[];
+			server: IStack[];
+			deployment: IStack[];
 		};
 	};
 	challenges: string[];
@@ -16,5 +23,5 @@ interface Project {
 }
 
 export interface IProjects {
-	content: Project;
+	content: Project[];
 }

@@ -5,7 +5,10 @@ import MobileMenu from "./MobileMenu";
 
 function NavBar() {
 	return (
-		<header id="nav" className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary">
+		<header
+			id="nav"
+			className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary"
+		>
 			<Heading className="text-2xl font-bold text-white">
 				Shayne LaRochelle
 			</Heading>
