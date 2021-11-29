@@ -24,7 +24,7 @@ const Home: NextPage = () => {
 					property="og:description"
 					name="description"
 					content="Shayne LaRochelle is a Software Engineer experienced in designing,
-					developing a deploying full-stack applications."
+					developing and deploying full-stack applications."
 				/>
 				<meta property="og:author" name="author" content="Shayne LaRochelle" />
 				<meta
