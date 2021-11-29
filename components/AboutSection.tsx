@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Heading from "./Heading";
-
+import Lazy from "react-lazyload";
 const AboutSection = () => {
 	return (
 		<section>
@@ -27,13 +27,15 @@ const AboutSection = () => {
 						Currently, I spend most of my free time building full stack projects
 						and expanding my knowledge of new technologies.{" "}
 					</p>
-					<img
-						src="/myself.jpg"
-						className="md:h-60 lg:h-96 rounded-2xl mt-10 md:mt-0"
-						alt="Picture of Shayne"
-						width="800px"
-						height="800px"
-					/>
+					<Lazy>
+						<img
+							src="/myself.jpg"
+							className="md:h-60 lg:h-96 rounded-2xl mt-10 md:mt-0"
+							alt="Picture of Shayne"
+							width="800px"
+							height="800px"
+						/>
+					</Lazy>
 				</div>
 			</Layout>
 		</section>

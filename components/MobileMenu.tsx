@@ -26,10 +26,6 @@ function lockBody() {
 	body.classList.toggle("lock-screen");
 }
 export default function MobileMenu() {
-	function lockBody() {
-		const body = document.getElementsByTagName("BODY")[0];
-		body.classList.toggle("lock-screen");
-	}
 	return (
 		<div className="md:hidden">
 			<Menu>

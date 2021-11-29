@@ -14,7 +14,7 @@ import {
 import TechBadge from "./TechBadge";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
-
+import Lazy from "react-lazyload";
 function TechSection() {
 	return (
 		<Layout
@@ -24,22 +24,24 @@ function TechSection() {
 			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
 				Tech I&apos;ve been working with recently
 			</Heading>
-			<motion.div
-				className="flex flex-wrap justify-center max-w-5xl"
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				viewport={{ once: true }}
-			>
-				<TechBadge label="TypeScript" svg={SiTypescript} />
-				<TechBadge label="JavaScript" svg={SiJavascript} />
-				<TechBadge label="React" svg={SiReact} />
-				<TechBadge label="GraphQL" svg={SiGraphql} />
-				<TechBadge label="Python" svg={SiPython} />
-				<TechBadge label="Next.JS" svg={SiNextdotjs} />
-				<TechBadge label="CSS3" svg={SiCss3} />
-				<TechBadge label="SCSS" svg={SiSass} />
-				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
-			</motion.div>
+			<Lazy>
+				<motion.div
+					className="flex flex-wrap justify-center max-w-5xl"
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
+					viewport={{ once: true }}
+				>
+					<TechBadge label="TypeScript" svg={SiTypescript} />
+					<TechBadge label="JavaScript" svg={SiJavascript} />
+					<TechBadge label="React" svg={SiReact} />
+					<TechBadge label="GraphQL" svg={SiGraphql} />
+					<TechBadge label="Python" svg={SiPython} />
+					<TechBadge label="Next.JS" svg={SiNextdotjs} />
+					<TechBadge label="CSS3" svg={SiCss3} />
+					<TechBadge label="SCSS" svg={SiSass} />
+					<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
+				</motion.div>
+			</Lazy>
 		</Layout>
 	);
 }
