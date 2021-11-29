@@ -10,8 +10,9 @@ function HeroSection() {
 						Shayne LaRochelle
 					</Heading>
 					<p className="text-white md:text-xl lg:text-2xl text-lg mt-2 mb-10 font-semibold md:max-w-3xl  block">
-						I'm a Professional Golfer turned Software Developer with experience
-						designing, developing and deploying full-stack applications.
+						I&apos;m a Professional Golfer turned Software Developer with
+						experience designing, developing and deploying full-stack
+						applications.
 					</p>
 				</div>
 			</div>

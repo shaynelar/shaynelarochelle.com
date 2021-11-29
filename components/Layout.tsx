@@ -8,18 +8,16 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 	...props
 }: Props<Element>) {
 	const { className, ...other } = props;
-	if (as) {
-		const Container = as as keyof JSX.IntrinsicElements;
-
-		return (
-			<Container
-				className={`${className} flex justify-center items-center bg-primary`}
-				{...other}
-			>
-				{other.children}
-			</Container>
-		);
-	}
+	const Container = as as keyof JSX.IntrinsicElements;
+	return (
+		<Container
+			//@ts-ignore
+			className={`${className} flex justify-center items-center bg-primary`}
+			{...other}
+		>
+			{other.children}
+		</Container>
+	);
 }
 
 Layout.defaultProps = {

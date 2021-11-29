@@ -145,13 +145,6 @@ function MobileMenuList() {
 							>
 								Projects
 							</MobileMenuButton>
-							<MobileMenuButton
-								onClick={() => {
-									lockBody();
-								}}
-							>
-								Resume
-							</MobileMenuButton>
 						</ul>
 					</motion.div>
 				</MenuPopover>

@@ -22,7 +22,7 @@ function TechSection() {
 			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40 "
 		>
 			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
-				Tech I've been working with recently
+				Tech I&apos;ve been working with recently
 			</Heading>
 			<motion.div
 				className="flex flex-wrap justify-center max-w-5xl"

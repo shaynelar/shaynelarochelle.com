@@ -26,9 +26,6 @@ function NavBar() {
 					<li className="hidden md:block m-2">
 						<NavButton href="/#blog">Blog</NavButton>
 					</li>
-					<li className="hidden md:block m-2">
-						<NavButton href="/#">Resume</NavButton>
-					</li>
 				</ul>
 				<MobileMenu />
 			</nav>

@@ -16,10 +16,10 @@ const AboutSection = () => {
 				<div className="flex flex-col md:flex-row md:gap-4 text-white">
 					<p className="text-left text-lg text-gray-200 lg:text-2xl ">
 						{" "}
-						Hi, I'm Shayne! My interest in programming started in high school,
-						and developed further as I studied finance in university with the
-						goal of becoming a Data Scientist or Quantitative Analyst in the
-						financial sector.
+						Hi, I&apos;m Shayne! My interest in programming started in high
+						school, and developed further as I studied finance in university
+						with the goal of becoming a Data Scientist or Quantitative Analyst
+						in the financial sector.
 						<br />
 						<br />
 						As I delved deeper into the world of programming, I found my passion
