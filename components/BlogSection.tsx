@@ -2,7 +2,7 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import blogData from "../blog-data.json";
+import blogData from "../data/blog-data.json";
 
 export default function BlogSection() {
 	return (

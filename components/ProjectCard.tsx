@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { Icon } from "./TechBadge";
 import Tag from "./Tag";
 import Link from "next/link";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 interface Props {
 	project: {
 		title: string;
@@ -39,7 +39,7 @@ function ProjectCard({ project }: Props) {
 			</Heading>
 			<Tag label={project.type.title} color={project.type.color} />
 			<p className="text-gray-200 my-8 text-lg lg:text-xl">{project.about}</p>
-			<div className="hidden sm:flex mb-4 p-4 bg-primary rounded-lg flex-grow items-center justify-evenly shadow-2xl">
+			<div className="hidden sm:flex mb-4 p-4 py-6 bg-primary rounded-lg flex-grow items-center justify-evenly shadow-2xl">
 				{project.svg.map((icon) => (
 					<Icon key={icon} svg={icon} />
 				))}

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import data from "../data.json";
+import data from "../data/project-card-data.json";
 import ProjectCard from "./ProjectCard";
 import Lazy from "react-lazyload";
 function ProjectSection() {

@@ -6,8 +6,7 @@ import Heading from "../../components/Heading";
 import path from "path";
 import { promises as fs } from "fs";
 import { IProjects } from "../../utils/types";
-import TechBadge, { Icon } from "../../components/TechBadge";
-import { IconType } from "react-icons";
+import { Icon } from "../../components/TechBadge";
 import { NavButton } from "../../components/Button";
 
 const Project = ({ projects }: { projects: IProjects[] }) => {
@@ -60,7 +59,7 @@ const Project = ({ projects }: { projects: IProjects[] }) => {
 };
 
 export async function getStaticProps() {
-	const postsDirectory = path.join(process.cwd(), "./project");
+	const postsDirectory = path.join(process.cwd(), "./data/projectData");
 	const filenames = await fs.readdir(postsDirectory);
 
 	const projects = filenames.map(async (filename) => {

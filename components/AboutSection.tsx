@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "./Layout";
 import Heading from "./Heading";
-
+import Image from "next/image"
 const AboutSection = () => {
 	return (
 		<section>
 			<Layout
 				id="about"
 				as="article"
-				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
+				className="min-h-screen bg-primary p-4 flex-col flex xl:px-60 md:px-10 px-4 justify-center align-center relative"
 			>
 				<Heading className="text-5xl lg:text-6xl  text-white font-semibold mb-8 lg:my-12">
 					About Me
@@ -18,7 +18,7 @@ const AboutSection = () => {
 						{" "}
 						Hi, I&apos;m Shayne! My interest in programming started in high
 						school, and developed further as I studied finance in university
-						with the goal of becoming a Data Scientist or Quantitative Analyst
+						with the goal of becoming a data scientist or quantitative analyst
 						in the financial sector.
 						<br />
 						<br />
@@ -27,14 +27,16 @@ const AboutSection = () => {
 						Currently, I spend most of my free time building full stack projects
 						and expanding my knowledge of new technologies.{" "}
 					</p>
-					<img
-						src="/myself.jpg"
-						className="md:h-60 lg:h-96 rounded-2xl mt-10 md:mt-0"
-						alt="Picture of Shayne"
-						width="800px"
-						height="800px"
-						loading="lazy"
-					/>
+					<div className="md:h-60 lg:h-full w-full rounded-2xl mt-10 md:mt-0 overflow-hidden">
+						<Image
+							src="/myself.jpg"
+							alt="Picture of Shayne"
+							className="rounded-2xl"
+							width="800px"
+							height="800px"
+							loading="lazy"
+						/>
+					</div>
 				</div>
 			</Layout>
 		</section>

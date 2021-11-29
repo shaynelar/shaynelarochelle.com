@@ -19,7 +19,7 @@
     },
     {
         "title": "TS-Chat",
-        "about": "TS-Chat is a real-time chat platform. Users can create an account, subscribe to specific topics, and send and receive messages in real-time",
+        "about": "TS-Chat is a real-time chat platform. Users can create an account, subscribe to specific topics, and send and receive messages in real-time.",
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
@@ -38,7 +38,7 @@
     },
     {
         "title": "Friends of Japan",
-        "about": "Friends of Japan was a social media and content discovery platform focued on Japanese Animation and pop-culture",
+        "about": "Friends of Japan was a social media and content discovery platform focued on Japanese animation and pop-culture.",
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
@@ -73,7 +73,7 @@
     },
     {
         "title": "Predicting Credit Default",
-        "about": "A machine learning model which attempts to predict the likelihood of default by a prospective credit customer given various demographic and historical information as well as additionally engineered features.",
+        "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
         "image": "/creditDefault.jpg",
         "type": {
             "title": "Machine Learning",
