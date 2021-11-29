@@ -32,12 +32,17 @@ export function ActionButton(props: React.HTMLAttributes<HTMLButtonElement>) {
 	);
 }
 
-export function FooterButton(props: AnchorProps) {
+export function FooterButton(props: AnchorProps & Required<{ href: string }>) {
 	return (
 		<li>
-			<a href={props.href!} className="text-gray-300 text-lg hover:text-white md:text-xl lg:text-2xl">
-				{props.children}
-			</a>
+			<Link href={props.href}>
+				<a
+					href={props.href}
+					className="text-gray-300 text-lg hover:text-white md:text-xl lg:text-2xl"
+				>
+					{props.children}
+				</a>
+			</Link>
 		</li>
 	);
 }

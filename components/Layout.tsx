@@ -1,27 +1,17 @@
-type Props<Element extends keyof JSX.IntrinsicElements> = {
-	as: Element;
+type Props = {
+	as?: keyof JSX.IntrinsicElements;
 	children: React.ReactNode;
-} & JSX.IntrinsicElements[Element];
+} & React.HTMLAttributes<HTMLOrSVGElement>;
 
-function Layout<Element extends keyof JSX.IntrinsicElements>({
-	as,
-	...props
-}: Props<Element>) {
-	const { className, ...other } = props;
-	const Container = as as keyof JSX.IntrinsicElements;
+function Layout({ as: Container = "div", children, ...props }: Props) {
 	return (
-		//@ts-ignore
 		<Container
-			//@ts-ignore
-			className={`${className} flex justify-center items-center bg-primary`}
-			{...other}
+			{...props}
+			className={`${props.className} flex justify-center items-center bg-primary`}
 		>
-			{other.children}
+			{children}
 		</Container>
 	);
 }
 
-Layout.defaultProps = {
-	as: "div",
-};
 export default Layout;

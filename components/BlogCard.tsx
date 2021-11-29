@@ -19,7 +19,7 @@ export default function BlogCard({ title, tags, url }: Props) {
 				{title}
 			</h1>
 
-			<div className="flex gap-2 md:gap-4 mt-10 hidden sm:block">
+			<div className="flex gap-4 mt-10 hidden sm:block">
 				{tags.map((tag) => (
 					<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
 				))}
