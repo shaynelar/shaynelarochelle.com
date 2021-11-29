@@ -5,7 +5,7 @@
         "image": "/jobrium.png",
         "type": {
             "title": "Software Developement",
-            "color": "red-500"
+            "color": "bg-red-500"
         },
         "svg": [
             "SiTypescript",
@@ -23,7 +23,7 @@
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
-            "color": "red-500"
+            "color": "bg-red-500"
         },
         "svg": [
             "SiTypescript",
@@ -42,7 +42,7 @@
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
-            "color": "red-500"
+            "color": "bg-red-500"
         },
         "svg": [
             "SiTypescript",
@@ -60,7 +60,7 @@
         "image": "/emh.jpg",
         "type": {
             "title": "Machine Learning",
-            "color": "blue-500"
+            "color": "bg-blue-500"
         },
         "svg": [
             "SiPython",
@@ -77,7 +77,7 @@
         "image": "/creditDefault.jpg",
         "type": {
             "title": "Machine Learning",
-            "color": "blue-500"
+            "color": "bg-blue-500"
         },
         "svg": [
             "SiPython",
