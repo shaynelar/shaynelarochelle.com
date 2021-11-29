@@ -1,5 +1,6 @@
 import Layout from "./Layout";
 import Tag from "./Tag";
+import Lazy from "react-lazyload";
 interface Props {
 	title: string;
 	tags: string[];
@@ -18,12 +19,13 @@ export default function BlogCard({ title, tags, url }: Props) {
 			<h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl">
 				{title}
 			</h1>
-
-			<div className="flex gap-4 mt-10 hidden sm:block">
-				{tags.map((tag) => (
-					<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
-				))}
-			</div>
+			<Lazy offset={100}>
+				<div className="flex gap-4 mt-10 hidden sm:block">
+					{tags.map((tag) => (
+						<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
+					))}
+				</div>
+			</Lazy>
 		</Layout>
 	);
 }

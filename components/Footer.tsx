@@ -15,7 +15,7 @@ export default function Footer() {
 						<h2 className="text-white text-2xl font-semibold mt-10 md:mt-0 lg:text-3xl">
 							Connect with me!
 						</h2>
-						<div className="flex flex-col  gap-8 lg:gap-8  mt-8 justify-between">
+						<div className="flex flex-col gap-8 lg:gap-8 mt-8 justify-between">
 							<ContactLink
 								link="https://github.com/lockedNLevered"
 								label="GitHub"

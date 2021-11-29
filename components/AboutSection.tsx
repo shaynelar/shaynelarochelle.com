@@ -33,6 +33,7 @@ const AboutSection = () => {
 						alt="Picture of Shayne"
 						width="800px"
 						height="800px"
+						loading="lazy"
 					/>
 				</div>
 			</Layout>
