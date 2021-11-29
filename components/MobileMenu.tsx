@@ -38,7 +38,7 @@ export default function MobileMenu() {
 					return (
 						<>
 							<MenuButton
-								className="inline-flex items-center justify-center p-1 transition bg-dark text-gray-100 w-14 h-14 focus:outline-none rounded-xl "
+								className="inline-flex items-center justify-center p-1 transition bg-dark text-gray-100 w-14 h-14 focus:outline-none rounded-full "
 								onClick={() => {
 									lockBody();
 								}}
@@ -110,6 +110,7 @@ function MobileMenuList() {
 					className="z-50"
 				>
 					<motion.div
+						key="menu"
 						initial={{ y: -50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						exit={{ y: -50, opacity: 0 }}

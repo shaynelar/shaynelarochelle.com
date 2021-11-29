@@ -10,11 +10,11 @@ const AboutSection = () => {
 				as="article"
 				className="min-h-screen bg-primary p-4 flex-col flex  xl:px-60 md:px-10 px-4 justify-center align-center"
 			>
-				<Heading className="text-5xl lg:text-6xl text-white font-semibold mb-8 lg:my-12">
+				<Heading className="text-5xl lg:text-6xl  text-white font-semibold mb-8 lg:my-12">
 					About Me
 				</Heading>
 				<div className="flex flex-col md:flex-row md:gap-4 text-white">
-					<p className="text-left md:text-lg sm:text-md lg:text-2xl ">
+					<p className="text-left text-lg text-gray-200 lg:text-2xl ">
 						{" "}
 						Hi, I'm Shayne! My interest in programming started in high school,
 						and developed further as I studied finance in university with the

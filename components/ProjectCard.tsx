@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { Icon } from "./TechBadge";
 import Tag from "./Tag";
 import Link from "next/link";
-
+import {motion} from "framer-motion"
 interface Props {
 	project: {
 		title: string;
@@ -20,9 +20,12 @@ interface Props {
 
 function ProjectCard({ project }: Props) {
 	return (
-		<div
+		<motion.div
 			id={`${project.title}-card`}
 			className="p-8 md:p-12 rounded-2xl bg-dark shadow-2xl shadow-xl max-w-2xl"
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			viewport={{ once: true }}
 		>
 			<Heading className="text-3xl font-semibold text-gray-100 my-8 lg:text-4xl ">
 				<Link href={project.url}>
@@ -41,7 +44,7 @@ function ProjectCard({ project }: Props) {
 					<Icon key={icon} svg={icon} />
 				))}
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

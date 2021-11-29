@@ -13,6 +13,7 @@ import {
 } from "react-icons/si";
 import TechBadge from "./TechBadge";
 import Heading from "./Heading";
+import { motion } from "framer-motion";
 
 function TechSection() {
 	return (
@@ -23,7 +24,12 @@ function TechSection() {
 			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
 				Tech I've been working with recently
 			</Heading>
-			<div className="flex flex-wrap justify-center max-w-5xl">
+			<motion.div
+				className="flex flex-wrap justify-center max-w-5xl"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: true }}
+			>
 				<TechBadge label="TypeScript" svg={SiTypescript} />
 				<TechBadge label="JavaScript" svg={SiJavascript} />
 				<TechBadge label="React" svg={SiReact} />
@@ -33,7 +39,7 @@ function TechSection() {
 				<TechBadge label="CSS3" svg={SiCss3} />
 				<TechBadge label="SCSS" svg={SiSass} />
 				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
-			</div>
+			</motion.div>
 		</Layout>
 	);
 }
