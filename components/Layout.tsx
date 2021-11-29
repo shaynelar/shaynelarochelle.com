@@ -10,6 +10,7 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 	const { className, ...other } = props;
 	const Container = as as keyof JSX.IntrinsicElements;
 	return (
+		//@ts-ignore
 		<Container
 			//@ts-ignore
 			className={`${className} flex justify-center items-center bg-primary`}
