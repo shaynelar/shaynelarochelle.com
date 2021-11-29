@@ -8,7 +8,7 @@ import TechSection from "../components/TechSection";
 import ProjectSection from "../components/ProjectSection";
 import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
-import Lazy from "react-lazyload";
+
 const Home: NextPage = () => {
 	return (
 		<>
@@ -40,12 +40,8 @@ const Home: NextPage = () => {
 			<HeroSection />
 			<AboutSection />
 			<TechSection />
-			<Lazy offset={100}>
-				<ProjectSection />
-			</Lazy>
-			<Lazy offset={100}>
-				<BlogSection />
-			</Lazy>
+			<ProjectSection />
+			<BlogSection />
 			<Footer />
 		</>
 	);
