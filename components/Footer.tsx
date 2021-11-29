@@ -55,6 +55,7 @@ export default function Footer() {
 									<FooterButton href="/#about">About</FooterButton>
 									<FooterButton href="/#projects">Projects</FooterButton>
 									<FooterButton href="/#blog">Blog</FooterButton>
+									<FooterButton href="/sitemap.xml">Sitemap.xml</FooterButton>
 								</ul>
 							</nav>
 						</div>

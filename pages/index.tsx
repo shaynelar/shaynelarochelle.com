@@ -13,14 +13,22 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Shayne LaRochelle</title>
+				<title>Shayne LaRochelle || Software Developer</title>
 				<meta
+					property="og:title"
+					name="title"
+					content="Shayne LaRochelle Software Engineer"
+				/>
+				<meta property="og:type" content="website" />
+				<meta
+					property="og:description"
 					name="description"
 					content="Shayne LaRochelle is a Software Engineer experienced in designing,
 					developing a deploying full-stack applications."
 				/>
-				<meta name="author" content="Shayne LaRochelle"></meta>
+				<meta property="og:author" name="author" content="Shayne LaRochelle" />
 				<meta
+					property="og:keywords"
 					name="keywords"
 					content="React, Typescript, Javascript, Python, HTML, CSS, Software Developer, Software Engineer"
 				/>
