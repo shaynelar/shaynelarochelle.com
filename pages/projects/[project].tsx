@@ -13,15 +13,12 @@ import { NavButton } from "../../components/Button";
 const Project = ({ projects }: { projects: IProjects[] }) => {
 	const router = useRouter();
 	const { project } = router.query;
-
 	const pageData = projects[0].content.filter(
 		(content) => content.about.slug === project
 	)[0];
-	console.log(pageData.learned);
 	return (
 		<>
 			<NavBar />
-
 			<Layout
 				as="section"
 				className="min-h-screen bg-primary p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
