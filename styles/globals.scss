@@ -99,8 +99,9 @@ a {
 	@extend .project-card;
 	&:hover {
 		//Scale and stop font warping
-		transform: scale(1.02) translate3d(0, 0, 0) perspective(1px);
+		transform: translateY((-20px));
 		border: 2px solid $light;
+		z-index: 1;
 	}
 }
 
@@ -108,7 +109,8 @@ a {
 	@extend .project-card;
 	&:hover {
 		//Scale and stop font warping
-		transform: scale(1.02) translate3d(0, 0, 0) perspective(1px);
+		transform: translateY((-20px));
 		border: 2px solid $primary;
+		z-index: 1;
 	}
 }
