@@ -20,9 +20,9 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 			<NavBar />
 			<Layout
 				as="section"
-				className="min-h-screen bg-primary p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
+				className="min-h-screen  p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
 			>
-				<Heading className="text-white lg:text-5xl">
+				<Heading className="dark:text-white text-primary lg:text-5xl">
 					{pageData.about.title}
 				</Heading>
 				{pageData.about.url ? (
