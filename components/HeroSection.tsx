@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function HeroSection() {
 	return (
-		<Layout id="home" as="section" className="hero bg-primary p-4 sm:p-8">
+		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">
 				<motion.div
 					initial={{ opacity: 0, x: -200 }}
@@ -20,9 +20,9 @@ function HeroSection() {
 						default: { duration: 1.5 },
 					}}
 				>
-					<Heading className="xl:text-8xl lg:text-7xl md:text-6xl text-5xl font-bold text-blue-100 my-4 lg:my-8 xl:my-12 text-white">
-						<span className="text-blue-500">Shayne</span>
-						<span className="text-fuchsia-500"> LaRochelle</span>
+					<Heading className="xl:text-8xl lg:text-7xl md:text-6xl text-5xl font-bold text-blue-100 my-4 lg:my-8 xl:my-12">
+						<span className="dark:text-blue-500 text-dark">Shayne</span>
+						<span className="dark:text-fuchsia-500 text-dark"> LaRochelle</span>
 					</Heading>
 				</motion.div>
 				<motion.p
@@ -32,7 +32,7 @@ function HeroSection() {
 					transition={{
 						default: { duration: 2.2, delay: 0.4 },
 					}}
-					className="text-white md:text-xl lg:text-2xl text-lg mt-2 mb-10 font-semibold md:max-w-3xl text-gray-300"
+					className="dark:text-white text-dark md:text-xl lg:text-2xl text-lg mt-2 mb-10 font-semibold md:max-w-3xl text-gray-300"
 				>
 					I&apos;m a Professional Golfer turned Software Developer with
 					experience designing, developing and deploying full-stack

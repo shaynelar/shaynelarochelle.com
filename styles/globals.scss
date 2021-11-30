@@ -64,9 +64,20 @@ a {
 .footer-link {
 	border: 0.125rem solid transparent;
 	transition: 0.2s;
+}
+
+.footer-link-dark {
+	@extend .footer-link;
 	&:hover {
 		background-color: $dark;
 		border: 0.125rem solid $light;
+	}
+}
+.footer-link-light {
+	@extend .footer-link;
+	&:hover {
+		background-color: white;
+		border: 0.125rem solid $dark;
 	}
 }
 
@@ -82,9 +93,22 @@ a {
 	transition: 0.3s;
 	border: 2px solid transparent;
 	border-radius: 1rem;
+}
+
+.project-card-dark {
+	@extend .project-card;
 	&:hover {
 		//Scale and stop font warping
 		transform: scale(1.02) translate3d(0, 0, 0) perspective(1px);
 		border: 2px solid $light;
+	}
+}
+
+.project-card-light {
+	@extend .project-card;
+	&:hover {
+		//Scale and stop font warping
+		transform: scale(1.02) translate3d(0, 0, 0) perspective(1px);
+		border: 2px solid $primary;
 	}
 }

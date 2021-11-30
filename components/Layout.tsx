@@ -13,7 +13,7 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 		//@ts-ignore
 		<Container
 			{...props}
-			className={`flex justify-center items-center bg-primary ${
+			className={`flex justify-center items-center dark:bg-primary bg-white ${
 				className ? className : ""
 			}`}
 		>

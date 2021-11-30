@@ -2,14 +2,15 @@ import React from "react";
 import NavButton from "./NavButton";
 import Heading from "./Heading";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "./ThemeToggle";
 
 export default function NavBar() {
 	return (
 		<header
 			id="nav"
-			className="flex justify-between p-4 md:px-6 lg:px-10 items-center bg-primary"
+			className="flex justify-between p-4 md:px-6 lg:px-10 items-center dark:bg-primary bg-white"
 		>
-			<Heading className="text-2xl font-bold text-white">
+			<Heading className="text-xl font-bold dark:text-white text-primary">
 				Shayne LaRochelle
 			</Heading>
 			<nav>
@@ -27,9 +28,10 @@ export default function NavBar() {
 						<NavButton href="/#blog">Blog</NavButton>
 					</li>
 				</ul>
+
 				<MobileMenu />
 			</nav>
+			<ThemeToggle />
 		</header>
 	);
 }
-

@@ -34,7 +34,7 @@ export default function MobileMenu() {
 					return (
 						<>
 							<MenuButton
-								className="inline-flex items-center justify-center p-1 transition bg-dark text-gray-100 w-14 h-14 focus:outline-none rounded-full "
+								className="inline-flex items-center justify-center p-2 transition dark:bg-dark bg-light dark:text-gray-100 text-primary  focus:outline-none rounded-full "
 								onClick={() => {
 									lockBody();
 								}}
@@ -114,7 +114,7 @@ function MobileMenuList() {
 							duration: 0.3,
 							ease: "linear",
 						}}
-						className="flex flex-col h-full z-10 bg-primary"
+						className="flex flex-col h-full z-10 dark:bg-primary bg-white"
 					>
 						<ul className="flex flex-col z-10">
 							<MobileMenuButton

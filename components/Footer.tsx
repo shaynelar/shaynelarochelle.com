@@ -6,13 +6,13 @@ import { AnchorProps } from "../utils/types";
 
 export default function Footer() {
 	return (
-		<footer className="footer bg-dark py-20 px-4 md:px-8 flex flex-col lg:px-20 xl:px-40  lg:py-28 relative">
+		<footer className="footer dark:bg-dark py-20 px-4 md:px-8 flex flex-col lg:px-20 xl:px-40  lg:py-28 relative">
 			<div className="flex flex-col md:flex-row  gap-20 lg:gap-60 justify-evenly">
 				<div className="flex flex-col justify-between">
-					<Heading className="text-2xl md:text-3xl text-white font-bold absolute top-10 lg:text-4xl">
+					<Heading className="text-2xl md:text-3xl dark:text-white font-bold absolute top-10 lg:text-4xl">
 						Shayne LaRochelle
 					</Heading>
-					<h2 className="text-white text-2xl font-semibold mt-10 md:mt-0 lg:text-3xl">
+					<h2 className="dark:text-white text-primary text-2xl font-semibold mt-10 md:mt-0 lg:text-3xl">
 						Connect with me!
 					</h2>
 					<div className="flex flex-col gap-8 lg:gap-8 mt-8 justify-between">
@@ -32,7 +32,7 @@ export default function Footer() {
 							Tag={SiStackoverflow}
 						/>
 					</div>
-					<h2 className="absolute bottom-2 md:bottom-4 text-gray-100 lg:text-lg">
+					<h2 className="absolute bottom-2 md:bottom-4 dark:text-gray-100 text-primary lg:text-lg">
 						Designed{" "}
 						<span role="img" aria-label="paint">
 							🎨{" "}
@@ -45,7 +45,7 @@ export default function Footer() {
 					</h2>
 				</div>
 				<div className="flex flex-col gap-4 lg:gap-8">
-					<h2 className="text-white text-2xl font-semibold lg:text-3xl">
+					<h2 className="dark:text-white text-primary text-2xl font-semibold lg:text-3xl">
 						Site Map
 					</h2>
 					<div className="flex flex-col">
@@ -73,9 +73,9 @@ interface Props {
 
 function ContactLink({ Tag, label, link }: Props) {
 	return (
-		<a href={link} target="_blank" className="text-white" rel="noreferrer">
-			<div className="flex items-center lg:text-lg gap-2 md:gap-4 p-2 px-4 rounded-xl bg-primary shadow-2xl footer-link w-48 md:w-auto">
-				<Tag className="text-2xl text-white lg:text-3xl" />
+		<a href={link} target="_blank" className="dark:text-white text-primary" rel="noreferrer">
+			<div className="flex items-center lg:text-lg gap-2 md:gap-4 p-2 px-4 rounded-xl dark:bg-primary bg-light shadow-lg dark:footer-link-dark footer-link-light w-48 md:w-auto">
+				<Tag className="text-2xl dark:text-white text-primary lg:text-3xl" />
 				<span>{label}</span>
 			</div>
 		</a>
@@ -88,7 +88,7 @@ function FooterButton(props: AnchorProps) {
 			<Link href={props.href}>
 				<a
 					href={props.href}
-					className="text-gray-300 text-lg hover:text-white md:text-xl lg:text-2xl"
+					className="dark:text-gray-300 text-primary text-lg dark:hover:text-white hover:text-dark md:text-xl lg:text-2xl"
 				>
 					{props.children}
 				</a>

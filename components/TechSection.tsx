@@ -19,7 +19,7 @@ export default function TechSection() {
 	return (
 		<Layout
 			as="section"
-			className="flex flex-col min-h-screen bg-primary p-4 md:p-8 lg:p-20 xl:p-40 "
+			className="flex flex-col min-h-screen  p-4 md:p-8 lg:p-20 xl:p-40 "
 		>
 			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
 				Tech I&apos;ve been working with recently
