@@ -10,7 +10,7 @@ export default function ThemeToggle() {
 	}
 	return (
 		<div
-			className={`hidden md:block rounded-full text-center p-4 cursor-pointer ml-1 ${
+			className={`hidden rounded-full text-center p-4 cursor-pointer ml-1 ${
 				isOn ? "bg-dark" : "bg-light"
 			}`}
 			onClick={() => {
