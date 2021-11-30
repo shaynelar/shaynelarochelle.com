@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
+import { ThemeContext } from "../pages/_app";
 
 export default function ThemeToggle() {
-	const [isOn, setIsOn] = useState(true);
-	function handleTheme() {
-		const html = document.querySelector("html");
-		html?.classList.toggle("dark");
-	}
+	const { isDark, useHandleTheme } = useContext(ThemeContext);
+	const handleTheme = useHandleTheme
+	useEffect(() => {
+		const theme = localStorage.getItem("isDark");
+	}, []);
 	return (
 		<div
 			className={`hidden md:block rounded-full text-center p-4 cursor-pointer ml-1 ${
-				isOn ? "bg-dark" : "bg-light"
+				isDark ? "bg-dark" : "bg-light"
 			}`}
 			onClick={() => {
-				setIsOn((on) => !on);
-				localStorage.setItem("theme", JSON.stringify(isOn));
-				handleTheme();
+				handleTheme()
 			}}
 		>
-			{isOn ? (
+			{isDark ? (
 				<AnimatePresence>
 					<span role="img">
 						<RiSunLine className="text-white" />

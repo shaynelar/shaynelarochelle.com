@@ -2,7 +2,7 @@ import Layout from "./Layout";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
 
-function HeroSection() {
+export default function HeroSection() {
 	return (
 		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">
@@ -43,4 +43,4 @@ function HeroSection() {
 	);
 }
 
-export default HeroSection;
+

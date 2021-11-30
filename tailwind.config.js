@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
 	purge: {
+		purge: true,
 		content: ["./pages/**/*.tsx", "./components/*.tsx"],
 		safelist: ["bg-red-500", "bg-blue-500"], //These styles are not present in
 		//html at bulid time so they must be safelisted

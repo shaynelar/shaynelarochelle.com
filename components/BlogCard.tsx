@@ -1,6 +1,7 @@
 import Layout from "./Layout";
 import Tag from "./Tag";
 import Lazy from "react-lazyload";
+import React from "react";
 interface Props {
 	title: string;
 	tags: string[];

@@ -29,7 +29,7 @@ a {
 .button {
 	transition: 0.2s;
 	&:hover {
-		color: white;
+		color: $dark;
 	}
 }
 
@@ -69,15 +69,15 @@ a {
 .footer-link-dark {
 	@extend .footer-link;
 	&:hover {
-		background-color: $dark;
-		border: 0.125rem solid $light;
+		background-color: $primary;
+		border: 0.125rem solid white;
 	}
 }
 .footer-link-light {
 	@extend .footer-link;
 	&:hover {
 		background-color: white;
-		border: 0.125rem solid $dark;
+		border: 0.125rem solid $primary;
 	}
 }
 

@@ -1,9 +1,30 @@
 import "../styles/globals.scss";
 import "tailwindcss/tailwind.css";
 import type { AppProps } from "next/app";
+import { createContext, useState } from "react";
+
+interface Theme {
+	isDark: boolean;
+	useHandleTheme: () => void;
+}
+export const ThemeContext = createContext<Theme>({} as Theme);
 
 function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	const [isDark, setIsDark] = useState(true);
+	// typeof window === "object" ?  localStorage.clear() : () => null
+	function useHandleTheme() {
+		setIsDark((dark) => !dark);
+		
+		localStorage.setItem("isDark", JSON.stringify(isDark));
+		const html = document.querySelector("html");
+		html?.classList.toggle("dark");
+	}
+
+	return (
+		<ThemeContext.Provider value={{ isDark, useHandleTheme }}>
+			<Component {...pageProps} />
+		</ThemeContext.Provider>
+	);
 }
 
 export default MyApp;
