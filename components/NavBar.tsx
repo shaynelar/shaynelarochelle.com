@@ -1,9 +1,9 @@
 import React from "react";
-import { NavButton } from "./Button";
+import NavButton from "./NavButton";
 import Heading from "./Heading";
 import MobileMenu from "./MobileMenu";
 
-function NavBar() {
+export default function NavBar() {
 	return (
 		<header
 			id="nav"
@@ -32,4 +32,4 @@ function NavBar() {
 		</header>
 	);
 }
-export default NavBar;
+

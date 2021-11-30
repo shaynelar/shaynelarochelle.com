@@ -5,7 +5,7 @@ import {
 	useMenuButtonContext,
 } from "@reach/menu-button";
 import { AnimatePresence, motion } from "framer-motion";
-import { MobileMenuButton } from "./Button";
+import MobileMenuButton from "./MobileMenuButton";
 
 const topVariants = {
 	open: { rotate: 45, y: 7 },

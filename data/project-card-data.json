@@ -55,6 +55,22 @@
         "url": "/projects/friendsofjapan"
     },
     {
+        "title": "Predicting Credit Default",
+        "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
+        "image": "/creditDefault.jpg",
+        "type": {
+            "title": "Machine Learning",
+            "color": "bg-blue-500"
+        },
+        "svg": [
+            "SiPython",
+            "SiJupyter",
+            "SiScikitlearn",
+            "SiPandas"
+        ],
+        "url": "https://github.com/lockedNLevered/PredictingCreditDefaultML"
+    },
+    {
         "title": "Investigating the Efficient Market Hypothesis",
         "about": "Academic paper and machine learning model investigating the validity of the Efficient Market Hypothesis as it applies to  three companies stock.",
         "image": "/emh.jpg",
@@ -70,21 +86,5 @@
             "SiPandas"
         ],
         "url": "https://github.com/lockedNLevered/EfficientMarketTestML"
-    },
-    {
-        "title": "Predicting Credit Default",
-        "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
-        "image": "/creditDefault.jpg",
-        "type": {
-            "title": "Machine Learning",
-            "color": "bg-blue-500"
-        },
-        "svg": [
-            "SiPython",
-            "SiJupyter",
-            "SiScikitlearn",
-            "SiPandas"
-        ],
-        "url": "https://github.com/lockedNLevered/PredictingCreditDefaultML"
     }
 ]

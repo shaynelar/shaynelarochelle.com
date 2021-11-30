@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "./Layout";
 import {
 	SiTypescript,
@@ -15,7 +14,8 @@ import TechBadge from "./TechBadge";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
 import Lazy from "react-lazyload";
-function TechSection() {
+
+export default function TechSection() {
 	return (
 		<Layout
 			as="section"
@@ -26,7 +26,7 @@ function TechSection() {
 			</Heading>
 			<Lazy>
 				<motion.div
-					className="flex flex-wrap justify-center max-w-5xl"
+					className="flex flex-wrap justify-center max-w-5xl md:mt-4"
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
@@ -45,5 +45,3 @@ function TechSection() {
 		</Layout>
 	);
 }
-
-export default TechSection;

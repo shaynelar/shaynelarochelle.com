@@ -4,12 +4,13 @@ import Heading from "./Heading";
 import data from "../data/project-card-data.json";
 import ProjectCard from "./ProjectCard";
 import Lazy from "react-lazyload";
-function ProjectSection() {
+
+export default function ProjectSection() {
 	return (
 		<Layout
 			id="projects"
 			as="section"
-			className="flex flex-col min-h-screen  p-4"
+			className="flex flex-col min-h-screen p-4"
 		>
 			<Heading className="text-5xl lg:text-6xl text-white font-semibold mb-8 lg:my-12">
 				Projects
@@ -24,5 +25,3 @@ function ProjectSection() {
 		</Layout>
 	);
 }
-
-export default ProjectSection;

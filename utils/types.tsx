@@ -1,8 +1,8 @@
 import { IconType } from "react-icons";
 
 interface IStack {
-    name: string;
-    icon: keyof IconType;
+	name: string;
+	icon: keyof IconType;
 }
 
 interface Project {
@@ -25,3 +25,6 @@ interface Project {
 export interface IProjects {
 	content: Project[];
 }
+
+export type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
+	Required<{ href: string }>;

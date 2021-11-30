@@ -48,7 +48,8 @@ a {
 	&:hover {
 		border: 1px solid white;
 		background-color: black;
-		transform: scale(1.05);
+		//Scale and stop font warping
+		transform: scale(1.05) translate3d(0, 0, 0) perspective(1px);
 	}
 }
 
@@ -61,11 +62,11 @@ a {
 }
 
 .footer-link {
-	border: 2px solid transparent;
+	border: 0.125rem solid transparent;
 	transition: 0.2s;
 	&:hover {
 		background-color: $dark;
-		border: 2px solid #9f9f9f;
+		border: 0.125rem solid $light;
 	}
 }
 
@@ -77,7 +78,13 @@ a {
 	}
 }
 
-.side-graphic {
-	top: 50%;
-	transform: translateY(-50%);
+.project-card {
+	transition: 0.3s;
+	border: 2px solid transparent;
+	border-radius: 1rem;
+	&:hover {
+		//Scale and stop font warping
+		transform: scale(1.02) translate3d(0, 0, 0) perspective(1px);
+		border: 2px solid $light;
+	}
 }

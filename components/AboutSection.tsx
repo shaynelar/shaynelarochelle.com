@@ -1,20 +1,21 @@
 import React from "react";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import Image from "next/image"
-const AboutSection = () => {
+import Image from "next/image";
+
+export default function AboutSection() {
 	return (
 		<section>
 			<Layout
 				id="about"
 				as="article"
-				className="min-h-screen bg-primary p-4 flex-col flex xl:px-60 md:px-10 px-4 justify-center align-center relative"
+				className="min-h-screen bg-primary p-4 flex-col flex xl:px-56 lg:px-24 md:px-10 px-4 justify-center align-center relative"
 			>
-				<Heading className="text-5xl lg:text-6xl  text-white font-semibold mb-8 lg:my-12">
+				<Heading className="text-5xl lg:text-6xl text-white font-semibold mb-8 lg:my-12">
 					About Me
 				</Heading>
 				<div className="flex flex-col md:flex-row md:gap-4 text-white">
-					<p className="text-left text-lg text-gray-200 lg:text-2xl ">
+					<p className="text-left text-lg text-gray-300 lg:text-2xl ">
 						{" "}
 						Hi, I&apos;m Shayne! My interest in programming started in high
 						school, and developed further as I studied finance in university
@@ -41,6 +42,4 @@ const AboutSection = () => {
 			</Layout>
 		</section>
 	);
-};
-
-export default AboutSection;
+}

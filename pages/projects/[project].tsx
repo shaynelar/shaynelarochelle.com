@@ -7,9 +7,9 @@ import path from "path";
 import { promises as fs } from "fs";
 import { IProjects } from "../../utils/types";
 import { Icon } from "../../components/TechBadge";
-import { NavButton } from "../../components/Button";
+import NavButton from "../../components/NavButton";
 
-const Project = ({ projects }: { projects: IProjects[] }) => {
+export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;
 	const pageData = projects[0].content.filter(
@@ -56,7 +56,7 @@ const Project = ({ projects }: { projects: IProjects[] }) => {
 			<Footer />
 		</>
 	);
-};
+}
 
 export async function getStaticProps() {
 	const postsDirectory = path.join(process.cwd(), "./data/projectData");
@@ -87,8 +87,6 @@ export async function getStaticPaths() {
 		fallback: false,
 	};
 }
-
-export default Project;
 
 function StackSection({
 	title,
