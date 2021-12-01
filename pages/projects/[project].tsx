@@ -6,15 +6,11 @@ import Heading from "../../components/Heading";
 import path from "path";
 import { promises as fs } from "fs";
 import { IProjects } from "../../utils/types";
-import { Icon } from "../../components/TechBadge";
+import ProjectStackSection from "../../components/ProjectStackSection";
 import NavButton from "../../components/NavButton";
-import type { NextPage } from "next";
+import ProjectBlogSection from "../../components/ProjectBlogSection";
 
-export default function Project({
-	projects,
-}: {
-	projects: IProjects[];
-}): NextPage {
+export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;
 	const pageData = projects[0].content.filter(
@@ -41,19 +37,25 @@ export default function Project({
 					{pageData.about.description}
 				</p>
 				<div className="dark:bg-dark bg-light rounded-xl p-4 flex flex-col gap-6 w-full items-center">
-					<StackSection title="Client" tech={pageData.about.tech.client} />
-					<StackSection title="Server" tech={pageData.about.tech.server} />
-					<StackSection
+					<ProjectStackSection
+						title="Client"
+						tech={pageData.about.tech.client}
+					/>
+					<ProjectStackSection
+						title="Server"
+						tech={pageData.about.tech.server}
+					/>
+					<ProjectStackSection
 						title="Deployment"
 						tech={pageData.about.tech.deployment}
 					/>
 				</div>
-				<BlogSection title="What I Learned" items={pageData.learned} />
-				<BlogSection
+				<ProjectBlogSection title="What I Learned" items={pageData.learned} />
+				<ProjectBlogSection
 					title="Things that we're tough"
 					items={pageData.challenges}
 				/>
-				<BlogSection
+				<ProjectBlogSection
 					title="Things I'd do differently next time"
 					items={pageData.different}
 				/>
@@ -91,42 +93,4 @@ export async function getStaticPaths() {
 		],
 		fallback: false,
 	};
-}
-
-function StackSection({
-	title,
-	tech,
-}: {
-	title: string;
-	tech: { name: string; icon: string }[];
-}) {
-	return (
-		<div className="flex flex-col  gap-2">
-			<div className="flex justify-between items-center">
-				<h2 className="dark:text-white text-primary text-2xl">{title}</h2>
-				{tech.map((item, id) => (
-					<Icon key={item.name + id} svg={item.icon} />
-				))}
-			</div>
-		</div>
-	);
-}
-
-function BlogSection({ title, items }: { title: string; items: string[] }) {
-	return (
-		<section className="self-stretch">
-			<h2 className="dark:text-white text-primary text-2xl md:text-3xl lg:text-4xl font-bold my-10">
-				{title}
-			</h2>
-			{items.map((item) => (
-				<ul key={item}>
-					<li className="list-disc text-gray-300">
-						<p className="dark:text-gray-300 text-primary text-lg lg:text-xl leading-10  my-4">
-							{item}
-						</p>
-					</li>
-				</ul>
-			))}
-		</section>
-	);
 }
