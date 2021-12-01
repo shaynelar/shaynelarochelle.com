@@ -4,6 +4,7 @@ import { Icon } from "./TechBadge";
 import Tag from "./Tag";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import styles from "../styles/projectCard.module.scss";
 interface Props {
 	project: {
 		title: string;
@@ -21,10 +22,13 @@ interface Props {
 export default function ProjectCard({ project }: Props) {
 	return (
 		<Link href={project.url}>
-			<a className="dark:project-card-dark project-card-light" href={project.url}>
+			<a
+				className={`dark:${styles.projectCardDark} ${styles.projectCardLight}`}
+				href={project.url}
+			>
 				<motion.div
 					id={`${project.title}-card`}
-					className="p-8 md:p-12 rounded-2xl  dark:bg-dark bg-light shadow-lg shadow-xl max-w-2xl h-full"
+					className="p-8 md:p-12 rounded-2xl dark:bg-dark bg-light shadow-lg shadow-xl max-w-xl  h-full"
 					initial={{ opacity: 0, y: 150 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}

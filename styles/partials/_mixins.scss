@@ -1,0 +1,5 @@
+@mixin moveUp($color) {
+	transform: translateY((-0.9375rem));
+	border: 2px solid $color;
+	z-index: 1;
+}

@@ -1,7 +1,4 @@
 @use "./partials/variables" as *;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 html,
 body {
@@ -89,28 +86,4 @@ a {
 	}
 }
 
-.project-card {
-	transition: 0.3s;
-	border: 2px solid transparent;
-	border-radius: 1rem;
-}
 
-.project-card-dark {
-	@extend .project-card;
-	&:hover {
-		//Scale and stop font warping
-		transform: translateY((-20px));
-		border: 2px solid $light;
-		z-index: 1;
-	}
-}
-
-.project-card-light {
-	@extend .project-card;
-	&:hover {
-		//Scale and stop font warping
-		transform: translateY((-20px));
-		border: 2px solid $primary;
-		z-index: 1;
-	}
-}

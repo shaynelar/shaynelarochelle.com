@@ -1,0 +1,23 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+.project-card {
+	transition: 0.3s;
+	border: 2px solid transparent;
+	border-radius: 1rem;
+}
+
+.projectCardDark {
+	@extend .project-card;
+	&:hover {
+		//Scale and stop font warping
+		@include moveUp($color: $light);
+	}
+}
+
+.projectCardLight {
+	@extend .project-card;
+	&:hover {
+		//Scale and stop font warping
+		@include moveUp($color: $primary);
+	}
+}
