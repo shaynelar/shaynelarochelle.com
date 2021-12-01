@@ -5,23 +5,23 @@ import { createContext, useState } from "react";
 
 interface Theme {
 	isDark: boolean;
-	useHandleTheme: () => void;
+	handleTheme: () => void;
 }
 export const ThemeContext = createContext<Theme>({} as Theme);
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [isDark, setIsDark] = useState(true);
 	// typeof window === "object" ?  localStorage.clear() : () => null
-	function useHandleTheme() {
+	function handleTheme() {
 		setIsDark((dark) => !dark);
-		
+
 		localStorage.setItem("isDark", JSON.stringify(isDark));
 		const html = document.querySelector("html");
 		html?.classList.toggle("dark");
 	}
 
 	return (
-		<ThemeContext.Provider value={{ isDark, useHandleTheme }}>
+		<ThemeContext.Provider value={{ isDark, handleTheme }}>
 			<Component {...pageProps} />
 		</ThemeContext.Provider>
 	);

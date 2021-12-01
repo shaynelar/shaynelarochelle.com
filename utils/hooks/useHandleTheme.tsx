@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useHandleTheme() {
+const useHandleTheme = () => {
 	const [isDark, setIsDark] = useState(true);
 	useEffect(() => {
 		setIsDark((dark) => !dark);
@@ -10,4 +10,4 @@ export default function useHandleTheme() {
 	}, []);
 
 	return { isDark: isDark };
-}
+};

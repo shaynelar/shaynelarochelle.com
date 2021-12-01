@@ -70,7 +70,7 @@ a {
 	@extend .footer-link;
 	&:hover {
 		background-color: $primary;
-		border: 0.125rem solid white;
+		border: 0.125rem solid $light;
 	}
 }
 .footer-link-light {
