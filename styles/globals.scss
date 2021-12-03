@@ -73,7 +73,6 @@ a {
 .footer-link-light {
 	@extend .footer-link;
 	&:hover {
-		background-color: white;
 		border: 0.125rem solid $primary;
 	}
 }
@@ -85,5 +84,3 @@ a {
 		transform: scale(1.05);
 	}
 }
-
-

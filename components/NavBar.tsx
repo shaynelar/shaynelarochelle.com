@@ -15,20 +15,11 @@ export default function NavBar() {
 			</Heading>
 			<nav>
 				<ul className="flex">
-					<li className="hidden md:block m-2 ">
-						<NavButton href="/#nav">Home</NavButton>
-					</li>
-					<li className="hidden md:block m-2">
-						<NavButton href="/#about">About</NavButton>
-					</li>
-					<li className="hidden md:block m-2">
-						<NavButton href="/#projects">Projects</NavButton>
-					</li>
-					<li className="hidden md:block m-2">
-						<NavButton href="/#blog">Blog</NavButton>
-					</li>
+					<NavButton href="/#nav">Home</NavButton>
+					<NavButton href="/#about">About</NavButton>
+					<NavButton href="/#projects">Projects</NavButton>
+					<NavButton href="/#blog">Blog</NavButton>
 				</ul>
-
 				<MobileMenu />
 			</nav>
 			<ThemeToggle />

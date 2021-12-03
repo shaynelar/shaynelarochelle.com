@@ -6,77 +6,22 @@ import {
 } from "@reach/menu-button";
 import { AnimatePresence, motion } from "framer-motion";
 import MobileMenuButton from "./MobileMenuButton";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
+import lockBody from "../utils/helpers/lockBody";
 
-const topVariants = {
-	open: { rotate: 45, y: 7 },
-	closed: { rotate: 0, y: 0 },
-};
-
-const centerVariants = {
-	open: { opacity: 0 },
-	closed: { opacity: 1 },
-};
-
-const bottomVariants = {
-	open: { rotate: -45, y: -5 },
-	closed: { rotate: 0, y: 0 },
-};
-function lockBody() {
-	const body = document.getElementsByTagName("BODY")[0];
-	body.classList.toggle("lock-screen");
-}
 export default function MobileMenu() {
 	return (
 		<div className="md:hidden">
 			<Menu>
 				{({ isExpanded }) => {
-					const state = isExpanded ? "open" : "closed";
 					return (
 						<>
 							<MenuButton
-								className="inline-flex items-center justify-center p-2 transition dark:bg-dark bg-light dark:text-gray-100 text-primary  focus:outline-none rounded-full "
-								onClick={() => {
-									lockBody();
-								}}
+								onMouseDown={lockBody}
+								className=" inline-flex items-center justify-center p-4 transition dark:bg-dark bg-light dark:text-gray-100 text-primary rounded-full"
 							>
-								<svg
-									width="32"
-									height="32"
-									viewBox="0 0 32 32"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<motion.rect
-										animate={state}
-										variants={topVariants}
-										x="6"
-										y="9"
-										width="20"
-										height="2"
-										rx="1"
-										fill="currentColor"
-									/>
-									<motion.rect
-										animate={state}
-										variants={centerVariants}
-										x="6"
-										y="15"
-										width="20"
-										height="2"
-										rx="1"
-										fill="currentColor"
-									/>
-									<motion.rect
-										animate={state}
-										variants={bottomVariants}
-										x="6"
-										y="21"
-										width="20"
-										height="2"
-										rx="1"
-										fill="currentColor"
-									/>
-								</svg>
+								{isExpanded ? <IoMdClose /> : <GiHamburgerMenu />}
 							</MenuButton>
 							<MobileMenuList />
 						</>
@@ -92,7 +37,7 @@ function MobileMenuList() {
 
 	return (
 		<AnimatePresence>
-			{isExpanded ? (
+			{isExpanded && (
 				<MenuPopover
 					position={(buttonPos) => ({
 						top: `calc(${
@@ -117,34 +62,19 @@ function MobileMenuList() {
 						className="flex flex-col h-full z-10 dark:bg-primary bg-white"
 					>
 						<ul className="flex flex-col z-10">
-							<MobileMenuButton
-								onClick={() => {
-									lockBody();
-								}}
-								href="/#nav"
-							>
+							<MobileMenuButton onClick={lockBody} href="/#nav">
 								Home
 							</MobileMenuButton>
-							<MobileMenuButton
-								onClick={() => {
-									lockBody();
-								}}
-								href="/#about"
-							>
+							<MobileMenuButton onClick={lockBody} href="/#about">
 								About
 							</MobileMenuButton>
-							<MobileMenuButton
-								onClick={() => {
-									lockBody();
-								}}
-								href="/#projects"
-							>
+							<MobileMenuButton onClick={lockBody} href="/#projects">
 								Projects
 							</MobileMenuButton>
 						</ul>
 					</motion.div>
 				</MenuPopover>
-			) : null}
+			)}
 		</AnimatePresence>
 	);
 }

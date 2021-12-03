@@ -12,10 +12,10 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 	return (
 		//@ts-ignore
 		<Container
-			{...props}
 			className={`flex justify-center items-center dark:bg-primary bg-white ${
-				className ? className : ""
+				className ?? ""
 			}`}
+			{...props}
 		>
 			{children}
 		</Container>

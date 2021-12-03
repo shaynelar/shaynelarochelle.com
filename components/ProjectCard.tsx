@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: Props) {
 	return (
 		<Link href={project.url}>
 			<a
-				className={`dark:${styles.projectCardDark} ${styles.projectCardLight}`}
+				className={`dark:hover:border-light ${styles.projectCardLight}`}
 				href={project.url}
 			>
 				<motion.div
