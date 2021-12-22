@@ -55,6 +55,21 @@
         "url": "/projects/friendsofjapan"
     },
     {
+        "title": "Slack Queue",
+        "about": "An application to automatically manage a queue in a Slack Workspace.",
+        "image": "/foj.png",
+        "type": {
+            "title": "Software Developement",
+            "color": "bg-red-500"
+        },
+        "svg": [
+            "SiTypescript",
+            "SiRedis",
+            "SiDocker"
+        ],
+        "url": "https://github.com/lockedNLevered/slack-queue"
+    },
+    {
         "title": "Predicting Credit Default",
         "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
         "image": "/creditDefault.jpg",
