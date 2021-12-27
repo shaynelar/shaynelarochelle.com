@@ -5,7 +5,7 @@
         "image": "/jobrium.png",
         "type": {
             "title": "Software Developement",
-            "color": "bg-red-500"
+            "color": "bg-red-600"
         },
         "svg": [
             "SiTypescript",
@@ -23,7 +23,7 @@
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
-            "color": "bg-red-500"
+            "color": "bg-red-600"
         },
         "svg": [
             "SiTypescript",
@@ -42,7 +42,7 @@
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
-            "color": "bg-red-500"
+            "color": "bg-red-600"
         },
         "svg": [
             "SiTypescript",
@@ -60,7 +60,7 @@
         "image": "/foj.png",
         "type": {
             "title": "Software Developement",
-            "color": "bg-red-500"
+            "color": "bg-red-600"
         },
         "svg": [
             "SiTypescript",
@@ -68,6 +68,23 @@
             "SiDocker"
         ],
         "url": "https://github.com/lockedNLevered/slack-queue"
+    },
+    {
+        "title": "WebAssembly Blockchain",
+        "about": "A WebAssembly Blockchain served over Node.Js to a React client",
+        "image": "/foj.png",
+        "type": {
+            "title": "Blockchain",
+            "color": "bg-green-600"
+        },
+        "svg": [
+            "SiRust",
+            "SiWebassembly",
+            "SiTypescript",
+            "SiNodedotjs",
+            "SiReact"
+        ],
+        "url": "https://github.com/lockedNLevered/rusty-chain"
     },
     {
         "title": "Predicting Credit Default",
