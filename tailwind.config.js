@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors");
 module.exports = {
 	purge: {
 		content: ["./pages/**/*.tsx", "./components/*.tsx"],
-		safelist: ["bg-red-500", "bg-blue-500"], //These styles are not present in
+		safelist: ["bg-red-600", "bg-blue-500", "bg-green-600"], //These styles are not present in
 		//html at bulid time so they must be safelisted
 	},
 	darkMode: "class", // or 'media' or 'class'
