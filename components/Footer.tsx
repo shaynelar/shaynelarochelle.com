@@ -17,7 +17,7 @@ export default function Footer() {
 					</h2>
 					<div className="flex flex-col gap-8 lg:gap-8 mt-8 justify-between">
 						<ContactLink
-							link="https://github.com/lockedNLevered"
+							link="https://github.com/shaynelar"
 							label="GitHub"
 							Tag={SiGithub}
 						/>
@@ -27,7 +27,7 @@ export default function Footer() {
 							Tag={SiLinkedin}
 						/>
 						<ContactLink
-							link="https://stackoverflow.com/users/12244448/lockednlevered"
+							link="https://stackoverflow.com/users/12244448/shaynel"
 							label="Stackoverflow"
 							Tag={SiStackoverflow}
 						/>
