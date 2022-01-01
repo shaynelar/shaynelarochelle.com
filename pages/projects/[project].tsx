@@ -89,7 +89,7 @@ export async function getStaticPaths() {
 	return {
 		paths: [
 			{ params: { project: "jobrium" } },
-			{ params: { project: "friendsofjapan" } }, // See the "paths" section below
+			{ params: { project: "friendsofjapan" } }, 
 		],
 		fallback: false,
 	};

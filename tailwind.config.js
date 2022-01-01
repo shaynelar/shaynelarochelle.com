@@ -18,7 +18,7 @@ module.exports = {
 			},
 		},
 	},
-	variants: {
+	i8variants: {
 		extend: {},
 	},
 	plugins: [],
