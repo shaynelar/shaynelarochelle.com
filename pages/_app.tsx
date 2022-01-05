@@ -1,26 +1,43 @@
 import "tailwindcss/tailwind.css";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import { createContext, useState } from "react";
+import {
+	createContext,
+	Dispatch,
+	SetStateAction,
+	useContext,
+	useEffect,
+	useState,
+	useLayoutEffect
+} from "react";
 
 interface Theme {
 	isDark: boolean;
-	handleTheme: () => void;
+	setIsDark: Dispatch<SetStateAction<boolean>>;
 }
-export const ThemeContext = createContext<Theme>({} as Theme);
 
+const initialTheme = {
+	isDark: false,
+	setIsDark: () => null as unknown as Dispatch<SetStateAction<boolean>>,
+};
+export const ThemeContext = createContext<Theme>(initialTheme);
+
+function handleTheme(state: boolean) {
+	localStorage.setItem("isDark", JSON.stringify(state));
+}
 function MyApp({ Component, pageProps }: AppProps) {
 	const [isDark, setIsDark] = useState(true);
-	//Refactor this later
-	function handleTheme() {
-		setIsDark((dark) => !dark);
-		localStorage.setItem("isDark", JSON.stringify(isDark));
-		const html = document.querySelector("html");
-		html?.classList.toggle("dark");
-	}
 
+	useLayoutEffect(() => {
+		if (localStorage.getItem("isDark")) {
+			setIsDark(JSON.parse(localStorage.getItem("isDark") as string));
+		}
+
+		const html = document.querySelector("html");
+		isDark ? html?.classList.add("dark") : html?.classList.remove("dark");
+	}, [isDark]);
 	return (
-		<ThemeContext.Provider value={{ isDark, handleTheme }}>
+		<ThemeContext.Provider value={{ isDark, setIsDark }}>
 			<Component {...pageProps} />
 		</ThemeContext.Provider>
 	);
