@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React from "react";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
@@ -10,10 +10,6 @@ import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
-	useEffect(() => {
-		const theme = localStorage.getItem("theme");
-		console.log(theme);
-	},[]);
 	return (
 		<>
 			<Head>

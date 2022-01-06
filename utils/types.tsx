@@ -1,3 +1,4 @@
+import { Dispatch } from "react";
 import { IconType } from "react-icons";
 
 interface IStack {
@@ -20,6 +21,19 @@ interface Project {
 	challenges: string[];
 	learned: string[];
 	different: string[];
+}
+
+export type ActionType =
+	| { type: "TOGGLETHEME" }
+	| { type: "INITIALIZE"; payload: boolean };
+
+export interface ThemeContextType {
+	state: ThemeState;
+	dispatch: Dispatch<ActionType>;
+}
+
+export interface ThemeState {
+	isDark: boolean;
 }
 
 export interface IProjects {

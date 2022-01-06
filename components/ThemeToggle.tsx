@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AnimatePresence } from "framer-motion";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
-import { ThemeContext } from "../pages/_app";
+import { ThemeContext } from "../utils/theme-context";
 
 export default function ThemeToggle() {
 	const { state, dispatch } = useContext(ThemeContext);
