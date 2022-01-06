@@ -1,57 +1,49 @@
 import "tailwindcss/tailwind.css";
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
-import {
-	createContext,
-	Dispatch,
-	SetStateAction,
-	useContext,
-	useEffect,
-	useReducer,
-	useState,
-	useLayoutEffect,
-} from "react";
+import { createContext, Dispatch, useReducer, useLayoutEffect } from "react";
 
-interface Theme {
-	state: {
-		isDark: boolean;
-	};
-
-	setIsDark: Dispatch<ActionType>;
+interface ThemeContextType {
+	state: ThemeState;
+	dispatch: Dispatch<ActionType>;
 }
 
-const initialTheme = {
+type ThemeState = {
+	isDark: boolean;
+};
+
+const initialTheme: ThemeContextType = {
 	state: {
-		isDark: false,
+		isDark: true,
 	},
-	setIsDark: () => null,
+	dispatch: () => null,
 };
 
 type ActionType =
 	| { type: "TOGGLETHEME" }
 	| { type: "INITIALIZE"; payload: boolean };
 
-function themeReducer(state: boolean, action: ActionType): boolean {
+function themeReducer(state: ThemeState, action: ActionType): ThemeState {
 	switch (action.type) {
 		case "INITIALIZE":
 			localStorage.setItem("isDark", JSON.stringify(action.payload));
-			return action.payload;
+			return { isDark: action.payload };
 
 		case "TOGGLETHEME":
-			const currentState = !state;
-			localStorage.setItem("isDark", JSON.stringify(currentState));
+			const currentState = { isDark: !state.isDark };
+			localStorage.setItem("isDark", JSON.stringify(currentState.isDark));
 			return currentState;
 	}
 }
 
-export const ThemeContext = createContext<Theme>(initialTheme);
+export const ThemeContext = createContext<ThemeContextType>(initialTheme);
 
 function handleTheme(state: boolean) {
 	localStorage.setItem("isDark", JSON.stringify(state));
 }
 function MyApp({ Component, pageProps }: AppProps) {
-	const [isDark, setIsDark] = useState(true);
-	const [state, dispatch] = useReducer(themeReducer, false);
+	// const [isDark, setIsDark] = useState(true);
+	const [state, dispatch] = useReducer(themeReducer, initialTheme.state);
 
 	useLayoutEffect(() => {
 		if (localStorage.getItem("isDark")) {
@@ -63,10 +55,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 			});
 		}
 		const html = document.querySelector("html");
-		isDark ? html?.classList.add("dark") : html?.classList.remove("dark");
-	}, [isDark]);
+		state.isDark ? html?.classList.add("dark") : html?.classList.remove("dark");
+	}, [state.isDark]);
 	return (
-		<ThemeContext.Provider value={{ state, disatch }}>
+		<ThemeContext.Provider value={{ state, dispatch }}>
 			<Component {...pageProps} />
 		</ThemeContext.Provider>
 	);

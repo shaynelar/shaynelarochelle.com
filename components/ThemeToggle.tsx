@@ -1,17 +1,21 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useContext } from "react";
+import { AnimatePresence } from "framer-motion";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
 import { ThemeContext } from "../pages/_app";
 
 export default function ThemeToggle() {
-	const { isDark, setIsDark } = useContext(ThemeContext);
-
+	const { state, dispatch } = useContext(ThemeContext);
+	const { isDark }: { isDark: boolean } = state;
 	return (
 		<div
 			className={`hidden md:block rounded-full text-center p-4 cursor-pointer ml-1 ${
 				isDark ? "bg-dark" : "bg-light"
 			}`}
-			onClick={() => setIsDark((current) => !current)}
+			onClick={() =>
+				dispatch({
+					type: "TOGGLETHEME",
+				})
+			}
 		>
 			{isDark ? (
 				<AnimatePresence>
