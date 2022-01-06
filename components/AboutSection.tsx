@@ -34,7 +34,6 @@ export default function AboutSection() {
 						className="rounded-2xl"
 						width="800px"
 						height="800px"
-						loading="lazy"
 					/>
 				</div>
 			</div>
