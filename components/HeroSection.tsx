@@ -37,7 +37,7 @@ export default function HeroSection() {
 					transition={{
 						default: { duration: 2.2, delay: 0.4 },
 					}}
-					className="dark:text-white text-dark md:text-xl lg:text-2xl text-lg mt-2 mb-10 font-semibold md:max-w-3xl text-gray-300"
+					className="dark:text-white  md:text-xl lg:text-2xl text-lg mt-2 mb-10 font-semibold md:max-w-3xl text-gray-500"
 				>
 					I&apos;m a Professional Golfer turned Software Developer with
 					experience designing, developing and deploying full-stack
