@@ -28,12 +28,12 @@ export default function ProjectCard({ project }: Props) {
 			>
 				<motion.div
 					id={`${project.title}-card`}
-					className="p-8 md:p-12 rounded-2xl dark:bg-dark bg-light shadow-lg shadow-xl max-w-xl  h-full"
+					className="p-8 md:p-12 rounded-2xl dark:bg-dark bg-light shadow-lg shadow-xl max-w-xl h-full"
 					initial={{ opacity: 0, y: 150 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 				>
-					<Heading className="text-3xl font-semibold text-gray-100 my-8 lg:text-4xl ">
+					<Heading className="text-3xl font-semibold text-gray-100 my-8 lg:text-4xl">
 						{project.title}
 					</Heading>
 					<Tag label={project.type.title} color={project.type.color} />

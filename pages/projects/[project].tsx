@@ -1,3 +1,4 @@
+import CustomHead from "../../components/Head";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/router";
@@ -18,6 +19,7 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 	)[0];
 	return (
 		<>
+			<CustomHead />
 			<NavBar />
 			<Layout
 				as="section"

@@ -1,8 +1,7 @@
 import Heading from "./Heading";
 import { SiGithub, SiLinkedin, SiStackoverflow } from "react-icons/si";
-import { IconType } from "react-icons";
-import Link from "next/link";
-import { AnchorProps } from "../utils/types";
+import FooterButton from "./FooterButton";
+import ContactLink from "./ContactLink";
 
 export default function Footer() {
 	return (
@@ -62,42 +61,5 @@ export default function Footer() {
 				</div>
 			</div>
 		</footer>
-	);
-}
-
-interface Props {
-	Tag: IconType;
-	label: string;
-	link: string;
-}
-
-function ContactLink({ Tag, label, link }: Props) {
-	return (
-		<a
-			href={link}
-			target="_blank"
-			className="dark:text-white text-primary"
-			rel="noreferrer"
-		>
-			<div className="flex items-center lg:text-lg gap-2 md:gap-4 p-2 px-4 rounded-xl dark:bg-primary dark:hover:border-light bg-white shadow-lg dark:footer-link-dark footer-link-light w-48 md:w-auto">
-				<Tag className="text-2xl dark:text-white text-primary lg:text-3xl" />
-				<span>{label}</span>
-			</div>
-		</a>
-	);
-}
-
-function FooterButton(props: AnchorProps) {
-	return (
-		<li>
-			<Link href={props.href}>
-				<a
-					href={props.href}
-					className="dark:text-gray-300 text-primary text-lg dark:hover:text-white hover:text-dark md:text-xl lg:text-2xl"
-				>
-					{props.children}
-				</a>
-			</Link>
-		</li>
 	);
 }
