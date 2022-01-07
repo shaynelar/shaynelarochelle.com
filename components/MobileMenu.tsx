@@ -5,11 +5,11 @@ import {
 	useMenuButtonContext,
 } from "@reach/menu-button";
 import { AnimatePresence, motion } from "framer-motion";
-import MobileMenuButton from "./MobileMenuButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
-import lockBody from "../utils/helpers/lockBody";
+import MobileMenuButton from "./MobileMenuButton";
 import ThemeToggle from "./ThemeToggle";
+import lockBody from "../utils/helpers/lockBody";
 
 export default function MobileMenu() {
 	return (
@@ -28,7 +28,6 @@ export default function MobileMenu() {
 						</>
 					);
 				}}
-				
 			</Menu>
 		</div>
 	);
@@ -73,7 +72,7 @@ function MobileMenuList() {
 							<MobileMenuButton onClick={lockBody} href="/#projects">
 								Projects
 							</MobileMenuButton>
-							<ThemeToggle mobile/>
+							<ThemeToggle mobile />
 						</ul>
 					</motion.div>
 				</MenuPopover>

@@ -1,4 +1,3 @@
-import Layout from "./Layout";
 import {
 	SiTypescript,
 	SiJavascript,
@@ -10,10 +9,11 @@ import {
 	SiSass,
 	SiGraphql,
 } from "react-icons/si";
-import TechBadge from "./TechBadge";
-import Heading from "./Heading";
 import { motion } from "framer-motion";
 import Lazy from "react-lazyload";
+import Layout from "./Layout";
+import TechBadge from "./TechBadge";
+import Heading from "./Heading";
 
 export default function TechSection() {
 	return (

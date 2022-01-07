@@ -1,9 +1,10 @@
 import React from "react";
+import Lazy from "react-lazyload";
+import data from "../data/project-card-data.json";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import data from "../data/project-card-data.json";
 import ProjectCard from "./ProjectCard";
-import Lazy from "react-lazyload";
+
 
 export default function ProjectSection() {
 	return (

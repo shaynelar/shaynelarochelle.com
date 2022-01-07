@@ -1,9 +1,9 @@
 import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import Heading from "./Heading";
 import { Icon } from "./TechBadge";
 import Tag from "./Tag";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import styles from "../styles/projectCard.module.scss";
 interface Props {
 	project: {
