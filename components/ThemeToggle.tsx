@@ -1,10 +1,8 @@
-import { useContext } from "react";
-import { AnimatePresence } from "framer-motion";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
-import { ThemeContext } from "../utils/theme-context";
+import useTheme from "../utils/hooks/use-theme";
 
 export default function ThemeToggle({ mobile = false }) {
-	const { state, dispatch } = useContext(ThemeContext);
+	const [state, dispatch] = useTheme();
 	const { isDark }: { isDark: boolean } = state;
 	return (
 		<div
