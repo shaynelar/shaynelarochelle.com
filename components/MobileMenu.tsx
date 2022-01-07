@@ -20,7 +20,7 @@ export default function MobileMenu() {
 						<>
 							<MenuButton
 								onMouseDown={lockBody}
-								className=" inline-flex items-center justify-center p-4 transition dark:bg-dark bg-light dark:text-gray-100 text-primary rounded-full"
+								className=" inline-flex items-center justify-center p-4  dark:bg-dark bg-light dark:text-gray-100 text-primary rounded-full"
 							>
 								{isExpanded ? <IoMdClose /> : <GiHamburgerMenu />}
 							</MenuButton>
