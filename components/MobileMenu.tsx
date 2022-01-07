@@ -9,6 +9,7 @@ import MobileMenuButton from "./MobileMenuButton";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import lockBody from "../utils/helpers/lockBody";
+import ThemeToggle from "./ThemeToggle";
 
 export default function MobileMenu() {
 	return (
@@ -27,6 +28,7 @@ export default function MobileMenu() {
 						</>
 					);
 				}}
+				
 			</Menu>
 		</div>
 	);
@@ -71,6 +73,7 @@ function MobileMenuList() {
 							<MobileMenuButton onClick={lockBody} href="/#projects">
 								Projects
 							</MobileMenuButton>
+							<ThemeToggle mobile/>
 						</ul>
 					</motion.div>
 				</MenuPopover>
