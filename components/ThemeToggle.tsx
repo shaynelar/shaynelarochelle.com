@@ -1,7 +1,11 @@
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
 import useTheme from "../utils/hooks/use-theme";
 
-export default function ThemeToggle({ mobile = false }) {
+interface Props {
+	mobile?: boolean;
+}
+
+export default function ThemeToggle({ mobile = false }: Props) {
 	const [state, dispatch] = useTheme();
 	const { isDark }: { isDark: boolean } = state;
 	return (
