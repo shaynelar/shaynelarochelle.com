@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import { motion } from "framer-motion";
 
 export default function HeroSection() {
 	return (
@@ -21,9 +21,7 @@ export default function HeroSection() {
 					}}
 				>
 					<Heading className="xl:text-8xl lg:text-7xl md:text-6xl text-5xl font-bold text-blue-100 my-4 lg:my-8 xl:my-12">
-						<span className="dark:text-green-500 text-blue-600">
-							Shayne
-						</span>
+						<span className="dark:text-green-500 text-blue-600">Shayne</span>
 						<span className="dark:text-green-500 text-blue-600">
 							{" "}
 							LaRochelle
@@ -47,5 +45,3 @@ export default function HeroSection() {
 		</Layout>
 	);
 }
-
-

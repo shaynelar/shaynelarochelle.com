@@ -1,7 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import Image from "next/image";
 
 export default function AboutSection() {
 	return (
@@ -34,6 +34,8 @@ export default function AboutSection() {
 						className="rounded-2xl"
 						width="800px"
 						height="800px"
+						placeholder="blur"
+						blurDataURL={"/myself.jpg"}
 					/>
 				</div>
 			</div>

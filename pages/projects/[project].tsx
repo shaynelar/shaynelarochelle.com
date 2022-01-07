@@ -1,11 +1,11 @@
+import { promises as fs } from "fs";
+import path from "path";
+import { useRouter } from "next/router";
 import CustomHead from "../../components/Head";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
-import path from "path";
-import { promises as fs } from "fs";
 import { IProjects } from "../../utils/types";
 import ProjectStackSection from "../../components/ProjectStackSection";
 import NavButton from "../../components/NavButton";
