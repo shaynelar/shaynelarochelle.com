@@ -1,12 +1,11 @@
 import type { NextPage } from "next";
 import React from "react";
 import CustomHead from "../components/Head";
-
+import NavBar from "../components/NavBar";
+import HeroSection from "../components/HeroSection";
 import dynamic from "next/dynamic";
 
 const Home: NextPage = () => {
-	const NavBar = dynamic(() => import("../components/NavBar"));
-	const HeroSection = dynamic(() => import("../components/HeroSection"));
 	const TechSection = dynamic(() => import("../components/TechSection"));
 	const AboutSection = dynamic(() => import("../components/AboutSection"));
 	const ProjectSection = dynamic(() => import("../components/ProjectSection"));
