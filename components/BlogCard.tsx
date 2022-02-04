@@ -22,7 +22,7 @@ export default function BlogCard({ title, tags, url }: Props) {
 				{title}
 			</h1>
 			<Lazy offset={100}>
-				<div className="flex gap-4 mt-10 hidden sm:block">
+				<div className="gap-4 mt-10 hidden sm:block">
 					{tags.map((tag) => (
 						<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
 					))}

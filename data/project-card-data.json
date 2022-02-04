@@ -4,7 +4,7 @@
         "about": "Jobrium is an application analytics platform that enables job seekers to keep track of their applications, view their application histories and set application goals.",
         "image": "/jobrium.png",
         "type": {
-            "title": "Software Developement",
+            "title": "Software Dev",
             "color": "bg-red-600"
         },
         "svg": [
@@ -15,14 +15,38 @@
             "SiGraphql",
             "SiAmazonaws"
         ],
-        "url": "/projects/jobrium"
+        "blog": "/projects/jobrium",
+        "live": "https://jobrium.com",
+        "github": null
+    },
+    {
+        "title": "upBeet",
+        "about": "Recipe tracking app for home cooks. Users can create new recipes simply by pasting an image of the recipe.",
+        "image": null,
+        "video": "/upBeet-walkthrough-cut.mp4",
+        "type": {
+            "title": "Software Dev",
+            "color": "bg-red-600"
+        },
+        "svg": [
+            "SiTypescript",
+            "SiReact",
+            "SiNextdotjs",
+            "SiNodedotjs",
+            "SiApollographql",
+            "SiGraphql",
+            "SiMysql"
+        ],
+        "blog": null,
+        "github": null,
+        "live": null
     },
     {
         "title": "TS-Chat",
         "about": "TS-Chat is a real-time chat platform. Users can create an account, subscribe to specific topics, and send and receive messages in real-time.",
-        "image": "/foj.png",
+        "image": null,
         "type": {
-            "title": "Software Developement",
+            "title": "Software Dev",
             "color": "bg-red-600"
         },
         "svg": [
@@ -34,14 +58,16 @@
             "SiApollographql",
             "SiGraphql"
         ],
-        "url": "https://github.com/lockedNLevered/ts-chat-server"
+        "github": "https://github.com/lockedNLevered/ts-chat-server",
+        "live": null,
+        "blog": null
     },
     {
         "title": "Friends of Japan",
         "about": "Friends of Japan was a social media and content discovery platform focued on Japanese animation and pop-culture.",
-        "image": "/foj.png",
+        "image": null,
         "type": {
-            "title": "Software Developement",
+            "title": "Software Dev",
             "color": "bg-red-600"
         },
         "svg": [
@@ -52,14 +78,16 @@
             "SiDjango",
             "SiAmazonaws"
         ],
-        "url": "/projects/friendsofjapan"
+        "blog": "/projects/friendsofjapan",
+        "live": null,
+        "github": null
     },
     {
         "title": "Slack Queue",
         "about": "An application to automatically manage a queue in a Slack Workspace.",
-        "image": "/foj.png",
+        "image": null,
         "type": {
-            "title": "Software Developement",
+            "title": "Software Dev",
             "color": "bg-red-600"
         },
         "svg": [
@@ -67,12 +95,12 @@
             "SiRedis",
             "SiDocker"
         ],
-        "url": "https://github.com/lockedNLevered/slack-queue"
+        "github": "https://github.com/lockedNLevered/slack-queue"
     },
     {
         "title": "WebAssembly Blockchain",
         "about": "A WebAssembly Blockchain served over Node.Js to a React client",
-        "image": "/foj.png",
+        "image": null,
         "type": {
             "title": "Blockchain",
             "color": "bg-green-600"
@@ -84,12 +112,14 @@
             "SiNodedotjs",
             "SiReact"
         ],
-        "url": "https://github.com/lockedNLevered/rusty-chain"
+        "github": "https://github.com/lockedNLevered/rusty-chain",
+        "live": null,
+        "blog": null
     },
     {
         "title": "Predicting Credit Default",
         "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
-        "image": "/creditDefault.jpg",
+        "image": null,
         "type": {
             "title": "Machine Learning",
             "color": "bg-blue-500"
@@ -100,12 +130,14 @@
             "SiScikitlearn",
             "SiPandas"
         ],
-        "url": "https://github.com/lockedNLevered/PredictingCreditDefaultML"
+        "github": "https://github.com/lockedNLevered/PredictingCreditDefaultML",
+        "live": null,
+        "blog": null
     },
     {
         "title": "Investigating the Efficient Market Hypothesis",
         "about": "Academic paper and machine learning model investigating the validity of the Efficient Market Hypothesis as it applies to  three companies stock.",
-        "image": "/emh.jpg",
+        "image": null,
         "type": {
             "title": "Machine Learning",
             "color": "bg-blue-500"
@@ -117,6 +149,8 @@
             "SiScikitlearn",
             "SiPandas"
         ],
-        "url": "https://github.com/lockedNLevered/EfficientMarketTestML"
+        "github": "https://github.com/lockedNLevered/EfficientMarketTestML",
+        "live": null,
+        "blog": null
     }
 ]

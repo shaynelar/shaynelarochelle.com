@@ -5,7 +5,6 @@ import Layout from "./Layout";
 import Heading from "./Heading";
 import ProjectCard from "./ProjectCard";
 
-
 export default function ProjectSection() {
 	return (
 		<Layout
@@ -26,3 +25,5 @@ export default function ProjectSection() {
 		</Layout>
 	);
 }
+
+

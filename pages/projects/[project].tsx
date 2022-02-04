@@ -6,10 +6,10 @@ import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
-import { IProjects } from "../../utils/types";
 import ProjectStackSection from "../../components/ProjectStackSection";
 import NavButton from "../../components/NavButton";
 import ProjectBlogSection from "../../components/ProjectBlogSection";
+import { IProjects } from "../../utils/types";
 
 export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
@@ -25,7 +25,7 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 				as="section"
 				className="min-h-screen p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
 			>
-				<Heading className="dark:text-white text-primary text-primary lg:text-5xl">
+				<Heading className="dark:text-white text-primary  lg:text-5xl">
 					{pageData.about.title}
 				</Heading>
 				{pageData.about.url ? (

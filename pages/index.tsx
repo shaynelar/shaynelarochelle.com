@@ -9,7 +9,6 @@ import ProjectSection from "../components/ProjectSection";
 import BlogSection from "../components/BlogSection";
 import Footer from "../components/Footer";
 
-
 const Home: NextPage = () => {
 	return (
 		<>

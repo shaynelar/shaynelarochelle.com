@@ -10,7 +10,9 @@ interface Project {
 	about: {
 		title: string;
 		description: string;
-		url: string;
+		live: string | null;
+		blog: string | null;
+		github: string | null;
 		slug: string;
 		tech: {
 			client: IStack[];
