@@ -4,12 +4,13 @@ import CustomHead from "../components/Head";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
-import TechSection from "../components/TechSection";
-import ProjectSection from "../components/ProjectSection";
-import BlogSection from "../components/BlogSection";
-import Footer from "../components/Footer";
+import loadable from "@loadable/component";
 
 const Home: NextPage = () => {
+	const TechSection = loadable(() => import("../components/TechSection"));
+	const ProjectSection = loadable(() => import("../components/ProjectSection"));
+	const BlogSection = loadable(() => import("../components/BlogSection"));
+	const Footer = loadable(() => import("../components/Footer"));
 	return (
 		<>
 			<CustomHead />
@@ -20,7 +21,6 @@ const Home: NextPage = () => {
 			<ProjectSection />
 			<BlogSection />
 			<Footer />
-			{/* <div className="fixed right-10 h-5/6 top-20 bg-white w-10"></div> */}
 		</>
 	);
 };

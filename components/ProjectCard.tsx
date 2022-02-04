@@ -82,6 +82,7 @@ export default function ProjectCard({ project }: Props) {
 				<img
 					className="hidden lg:block relative bottom-0 right-0  object-cover rounded-lg w-full h-80 mt-4"
 					src={project.image}
+					alt={project.title}
 				/>
 			)}
 

@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "@next/bundle-analyzer": "^12.0.4",
     "@reach/menu-button": "^0.16.2",
     "framer-motion": "^5.3.1",
@@ -19,6 +20,7 @@
     "sass": "^1.44.0"
   },
   "devDependencies": {
+    "@types/loadable__component": "^5.13.4",
     "@types/node": "16.11.9",
     "@types/react": "17.0.36",
     "@types/react-lazyload": "^3.1.1",
