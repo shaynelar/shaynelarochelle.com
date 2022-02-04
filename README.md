@@ -4,7 +4,7 @@ Tech used:
 
 - TypeScript
 - React
-- Next.JS (SSG)
+- Next.js (SSG)
 - Tailwind
 - Framer Motion
 - Some SASS when needing to do something extra
