@@ -8,12 +8,14 @@ export default function StackSection({
 	tech: { name: string; icon: string }[];
 }) {
 	return (
-		<div className="flex flex-col  gap-2">
-			<div className="flex justify-between items-center">
-				<h2 className="dark:text-white text-primary text-2xl">{title}</h2>
-				{tech.map((item, id) => (
-					<Icon key={item.name + id} svg={item.icon} />
-				))}
+		<div className="flex flex-col w-full  gap-2">
+			<div className="flex  items-center w-full">
+				<h2 className="dark:text-white w-1/2 text-primary text-2xl">{title}</h2>
+				<div className="flex justify-self-center">
+					{tech.map((item, id) => (
+						<Icon key={item.name + id} svg={item.icon} />
+					))}
+				</div>
 			</div>
 		</div>
 	);

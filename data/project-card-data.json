@@ -13,7 +13,8 @@
             "SiNextdotjs",
             "SiNodedotjs",
             "SiGraphql",
-            "SiAmazonaws"
+            "SiAmazonaws",
+            "SiPostgresql"
         ],
         "blog": "/projects/jobrium",
         "live": "https://jobrium.com",
@@ -56,7 +57,8 @@
             "SiNextdotjs",
             "SiNodedotjs",
             "SiApollographql",
-            "SiGraphql"
+            "SiGraphql",
+            "SiPostgresql"
         ],
         "github": "https://github.com/lockedNLevered/ts-chat-server",
         "live": null,
@@ -76,7 +78,9 @@
             "SiNextdotjs",
             "SiPython",
             "SiDjango",
+            "SiPostgresql",
             "SiAmazonaws"
+            
         ],
         "blog": "/projects/friendsofjapan",
         "live": null,
@@ -98,8 +102,8 @@
         "github": "https://github.com/lockedNLevered/slack-queue"
     },
     {
-        "title": "WebAssembly Blockchain",
-        "about": "A WebAssembly Blockchain served over Node.Js to a React client",
+        "title": "Web Assembly Blockchain",
+        "about": "A Web Assembly Blockchain served over Node.Js to a React client",
         "image": null,
         "type": {
             "title": "Blockchain",

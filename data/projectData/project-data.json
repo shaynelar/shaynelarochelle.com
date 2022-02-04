@@ -3,7 +3,7 @@
         "about": {
             "title": "Jobrium",
             "description": "Jobrium is a job candidate analytics application platform that enables job candidates to keep track of their applications. Users can track their application status, track jobs they want to apply for, and store information about the jobs they already have applied for, simply by pasting in the jobs URL. The development process took approximately 3 months (Frontend, Backend and Deployment)",
-            "url": "www.jobrium.com",
+            "live": "www.jobrium.com",
             "slug": "jobrium",
             "tech": {
                 "client": [
@@ -71,7 +71,7 @@
     {
         "about": {
             "title": "Friends of Japan",
-            "url": "offline",
+            "live": null,
             "description": "Friends of Japan was a social media and content discovery platfrom focused on Japanese Anime. At the time, my friend and I ran an Anime focused Instagram page that had ~20K followers. We noticed our followers were having long discussions on our posts and were also messaging us for show recomendations. I built this site to provide our community with a platform better suited to their needs. The development process took approximately 4 months (Frontend, Backend and Deployment)",
             "slug": "friendsofjapan",
             "tech": {

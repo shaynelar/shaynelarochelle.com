@@ -7,16 +7,17 @@ import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
 import ProjectStackSection from "../../components/ProjectStackSection";
-import NavButton from "../../components/NavButton";
 import ProjectBlogSection from "../../components/ProjectBlogSection";
 import { IProjects } from "../../utils/types";
-
+import ContactLink from "../../components/ContactLink";
+import { IoIosRocket } from "react-icons/io";
 export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;
 	const pageData = projects[0].content.filter(
 		(content) => content.about.slug === project
 	)[0];
+	console.log(pageData)
 	return (
 		<>
 			<CustomHead />
@@ -28,17 +29,19 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 				<Heading className="dark:text-white text-primary  lg:text-5xl">
 					{pageData.about.title}
 				</Heading>
-				{pageData.about.url ? (
-					<NavButton target="_blank" href={`https://${pageData.about.url}`}>
-						{pageData.about.url}
-					</NavButton>
+				{pageData.about.live ? (
+					<ContactLink
+						link={pageData.about.live}
+						label="View it live"
+						Tag={IoIosRocket}
+					/>
 				) : (
-					<p>Offline</p>
+					<p className="dark:text-white">Offline</p>
 				)}
 				<p className="dark:text-gray-300 text-primary  text-lg lg:text-xl leading-10  my-4">
 					{pageData.about.description}
 				</p>
-				<div className="dark:bg-dark bg-light rounded-xl p-4 flex flex-col gap-6 w-full items-center">
+				<div className="dark:bg-dark bg-light rounded-xl p-4 flex flex-col gap-6 w-full items-center shadow-lg">
 					<ProjectStackSection
 						title="Client"
 						tech={pageData.about.tech.client}
