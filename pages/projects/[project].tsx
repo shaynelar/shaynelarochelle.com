@@ -9,8 +9,8 @@ import Heading from "../../components/Heading";
 import ContactLink from "../../components/ContactLink";
 import NavBar from "../../components/NavBar";
 import LazyWrapper from "../../components/LazyWrapper";
-
 import { IProjects } from "../../utils/types";
+
 export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;

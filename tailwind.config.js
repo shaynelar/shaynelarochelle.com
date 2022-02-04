@@ -1,4 +1,3 @@
-const colors = require("tailwindcss/colors");
 module.exports = {
 	purge: {
 		content: ["./pages/**/*.tsx", "./components/*.tsx"],
@@ -12,9 +11,6 @@ module.exports = {
 				dark: "#303030",
 				primary: "#1a1a1a",
 				light: "#F4F4F4",
-				orange: colors.orange,
-				fuchsia: colors.fuchsia,
-				lime: colors.lime,
 			},
 		},
 	},
