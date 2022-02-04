@@ -3,6 +3,7 @@
         "title": "Jobrium",
         "about": "Jobrium is an application analytics platform that enables job seekers to keep track of their applications, view their application histories and set application goals.",
         "image": "/jobrium.png",
+        "video": null,
         "type": {
             "title": "Software Dev",
             "color": "bg-red-600"
@@ -46,6 +47,7 @@
         "title": "TS-Chat",
         "about": "TS-Chat is a real-time chat platform. Users can create an account, subscribe to specific topics, and send and receive messages in real-time.",
         "image": null,
+        "video": null,
         "type": {
             "title": "Software Dev",
             "color": "bg-red-600"
@@ -68,6 +70,7 @@
         "title": "Friends of Japan",
         "about": "Friends of Japan was a social media and content discovery platform focued on Japanese animation and pop-culture.",
         "image": null,
+        "video": null,
         "type": {
             "title": "Software Dev",
             "color": "bg-red-600"
@@ -90,6 +93,7 @@
         "title": "Slack Queue",
         "about": "An application to automatically manage a queue in a Slack Workspace.",
         "image": null,
+        "video": null,
         "type": {
             "title": "Software Dev",
             "color": "bg-red-600"
@@ -99,12 +103,15 @@
             "SiRedis",
             "SiDocker"
         ],
-        "github": "https://github.com/lockedNLevered/slack-queue"
+        "github": "https://github.com/lockedNLevered/slack-queue",
+        "live": null,
+        "blog": null
     },
     {
         "title": "Web Assembly Blockchain",
         "about": "A Web Assembly Blockchain served over Node.Js to a React client",
         "image": null,
+        "video": null,
         "type": {
             "title": "Blockchain",
             "color": "bg-green-600"
@@ -124,6 +131,7 @@
         "title": "Predicting Credit Default",
         "about": "A machine learning model attempting to predict the likelihood of default by a prospective credit customer.",
         "image": null,
+        "video": null,
         "type": {
             "title": "Machine Learning",
             "color": "bg-blue-500"
@@ -142,6 +150,7 @@
         "title": "Investigating the Efficient Market Hypothesis",
         "about": "Academic paper and machine learning model investigating the validity of the Efficient Market Hypothesis as it applies to  three companies stock.",
         "image": null,
+        "video": null,
         "type": {
             "title": "Machine Learning",
             "color": "bg-blue-500"
