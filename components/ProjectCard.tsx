@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: Props) {
 	return (
 		<motion.div
 			id={`${project.title}-card`}
-			className="p-4 sm:pd-8 md:p-12 rounded-2xl dark:bg-dark bg-light  shadow-xl max-w-xl lg:max-w-2xl h-full relative flex flex-col gap-4"
+			className="p-6 sm:pd-8 md:p-12 rounded-2xl dark:bg-dark bg-light  shadow-xl max-w-xl lg:max-w-2xl h-full relative flex flex-col gap-4"
 			initial={{ opacity: 0, y: 150 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
