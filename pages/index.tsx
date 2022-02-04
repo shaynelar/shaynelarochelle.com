@@ -4,16 +4,16 @@ import CustomHead from "../components/Head";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
-import TechSection from "../components/TechSection";
-import ProjectSection from "../components/ProjectSection";
-import BlogSection from "../components/BlogSection";
-import Footer from "../components/Footer";
+// import TechSection from "../components/TechSection";
+// import ProjectSection from "../components/ProjectSection";
+// import BlogSection from "../components/BlogSection";
+// import Footer from "../components/Footer";
 import loadable from "@loadable/component";
 const Home: NextPage = () => {
-	// const TechSection = loadable(() => import("../components/TechSection"));
-	// const ProjectSection = loadable(() => import("../components/ProjectSection"));
-	// const BlogSection = loadable(() => import("../components/BlogSection"));
-	// const Footer = loadable(() => import("../components/Footer"));
+	const TechSection = loadable(() => import("../components/TechSection"));
+	const ProjectSection = loadable(() => import("../components/ProjectSection"));
+	const BlogSection = loadable(() => import("../components/BlogSection"));
+	const Footer = loadable(() => import("../components/Footer"));
 	return (
 		<>
 			<CustomHead />
