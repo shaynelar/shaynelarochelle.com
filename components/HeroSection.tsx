@@ -26,8 +26,8 @@ export default function HeroSection() {
 		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">
 				<motion.div
-					initial={{ opacity: 0, x: -500 }}
-					whileInView={{ opacity: 1, x: 0 }}
+					initial={{ opacity: 0 }}
+					whileInView={{ opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{
 						x: {

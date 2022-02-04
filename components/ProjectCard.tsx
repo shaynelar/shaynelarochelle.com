@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Heading from "./Heading";
 import { Icon } from "./TechBadge";
@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: Props) {
 	return (
 		<motion.div
 			id={`${project.title}-card`}
-			className="p-6 sm:pd-8 md:p-12 rounded-2xl dark:bg-dark bg-light  shadow-xl max-w-xl lg:max-w-2xl h-full relative flex flex-col gap-4"
+			className="p-6 sm:pd-8 md:p-12 rounded-2xl dark:bg-dark bg-light  shadow-xl max-w-xl lg:max-w-2xl h-full  flex flex-col gap-4"
 			initial={{ opacity: 0, y: 150 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
@@ -80,20 +80,29 @@ export default function ProjectCard({ project }: Props) {
 				))}
 			</div>
 			{project.image && (
-				<img
-					className="hidden lg:block relative bottom-0 right-0  object-cover rounded-lg w-full h-80 mt-4"
+				<Image
+					className="object-cover rounded-md w-full mt-4 shadow-md  h-80"
 					src={project.image}
 					alt={project.title}
+					width="1903px"
+					height="1007px"
+					placeholder="blur"
+					blurDataURL={project.image}
+					quality={100}
 				/>
 			)}
 
 			{project.video && (
 				<LazyLoad height={100}>
 					<video
-						className="hidden lg:block relative bottom-0 right-0  object-cover rounded-lg w-full h-80 mt-4"
+						className="object-cover md:rounded-md   shadow-md md:h-80"
 						controls
-						src={project.video}
-					></video>
+						width="1920px"
+						height="1080px"
+						muted
+					>
+						<source src={project.video} type="video/mp4" />
+					</video>
 				</LazyLoad>
 			)}
 		</motion.div>
