@@ -80,16 +80,18 @@ export default function ProjectCard({ project }: Props) {
 				))}
 			</div>
 			{project.image && (
-				<Image
-					className="object-cover rounded-md w-full mt-4 shadow-md  h-80"
-					src={project.image}
-					alt={project.title}
-					width="1903px"
-					height="1007px"
-					placeholder="blur"
-					blurDataURL={project.image}
-					quality={100}
-				/>
+				<LazyLoad height={100}>
+					<Image
+						className="object-cover rounded-md w-full mt-4 shadow-md  h-80"
+						src={project.image}
+						alt={project.title}
+						width="1903px"
+						height="1007px"
+						placeholder="blur"
+						blurDataURL={project.image}
+						quality={100}
+					/>
+				</LazyLoad>
 			)}
 
 			{project.video && (
