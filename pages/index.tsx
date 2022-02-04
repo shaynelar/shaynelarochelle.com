@@ -1,4 +1,4 @@
-import type { NextPage } from "next"
+import type { NextPage } from "next";
 import HeroSection from "../components/HeroSection";
 import dynamic from "next/dynamic";
 import AboutSection from "../components/AboutSection";

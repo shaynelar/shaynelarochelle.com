@@ -6,7 +6,7 @@ interface Props {
 
 export default function LazyWrapper({ children }: Props) {
 	return (
-		<LazyLoad height={200} debounce={100} once>
+		<LazyLoad height={200} debounce={200} once>
 			{children}
 		</LazyLoad>
 	);
