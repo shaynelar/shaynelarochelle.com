@@ -8,6 +8,7 @@ import { IoIosRocket, IoMdGlasses } from "react-icons/io";
 import ContactLink from "./ContactLink";
 import LazyLoad from "react-lazyload";
 import Image from "next/image";
+import Video from "./Video";
 
 interface Props {
 	project: {
