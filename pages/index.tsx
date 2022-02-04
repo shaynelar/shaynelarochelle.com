@@ -20,6 +20,7 @@ const Home: NextPage = () => {
 			<ProjectSection />
 			<BlogSection />
 			<Footer />
+			{/* <div className="fixed right-10 h-5/6 top-20 bg-white w-10"></div> */}
 		</>
 	);
 };
