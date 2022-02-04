@@ -8,7 +8,7 @@ import { IoIosRocket, IoMdGlasses } from "react-icons/io";
 import ContactLink from "./ContactLink";
 import LazyLoad from "react-lazyload";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+
 interface Props {
 	project: {
 		title: string;
@@ -27,7 +27,6 @@ interface Props {
 }
 
 export default function ProjectCard({ project }: Props) {
-	const Video = dynamic(() => import("./Video"), { ssr: false });
 	return (
 		<motion.div
 			id={`${project.title}-card`}
@@ -96,7 +95,11 @@ export default function ProjectCard({ project }: Props) {
 				</LazyLoad>
 			)}
 
-			{project.video && <Video source={project.video} />}
+			{project.video && (
+				<LazyLoad height={100}>
+					<Video source={project.video} />
+				</LazyLoad>
+			)}
 		</motion.div>
 	);
 }

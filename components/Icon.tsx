@@ -10,6 +10,6 @@ export default function Icon({ svg }: { svg: string }) {
 	);
 
 	return (
-		<Icon className="dark:text-blue-200 text-primary text-2xl md:text-3xl mx-2" />
+		<Icon className="dark:text-green-200 text-primary text-2xl md:text-3xl mx-2" />
 	);
 }
