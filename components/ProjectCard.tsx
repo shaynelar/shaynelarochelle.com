@@ -7,6 +7,7 @@ import Tag from "./Tag";
 import { SiGithub } from "react-icons/si";
 import { IoIosRocket, IoMdGlasses } from "react-icons/io";
 import ContactLink from "./ContactLink";
+import LazyLoad from "react-lazyload";
 interface Props {
 	project: {
 		title: string;
@@ -87,13 +88,13 @@ export default function ProjectCard({ project }: Props) {
 			)}
 
 			{project.video && (
-				<video
-					className="hidden lg:block relative bottom-0 right-0  object-cover rounded-lg w-full h-80 mt-4"
-					autoPlay
-					controls
-					src={project.video + "#t=0.5"}
-					placeholder={project.video + "#t=0.5"}
-				></video>
+				<LazyLoad height={100}>
+					<video
+						className="hidden lg:block relative bottom-0 right-0  object-cover rounded-lg w-full h-80 mt-4"
+						controls
+						src={project.video}
+					></video>
+				</LazyLoad>
 			)}
 		</motion.div>
 	);

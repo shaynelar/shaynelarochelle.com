@@ -21,7 +21,7 @@ export default function CustomHead() {
 			<meta
 				property="og:keywords"
 				name="keywords"
-				content="React, Typescript, Javascript, Python, HTML, CSS, Software Developer, Software Engineer"
+				content="React, TypeScript, JavaScript, Node.js, Software Developer, Front end Developer, Rust, Python, HTML, CSS, Software Developer, Software Engineer"
 			/>
 
 			<meta charSet="UTF-8" />
