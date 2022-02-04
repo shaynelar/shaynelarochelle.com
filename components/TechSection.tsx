@@ -8,6 +8,9 @@ import {
 	SiCss3,
 	SiSass,
 	SiGraphql,
+	SiPostgresql,
+	SiMysql,
+	SiNodedotjs,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import Lazy from "react-lazyload";
@@ -45,11 +48,14 @@ export default function TechSection() {
 					<TechBadge label="TypeScript" svg={SiTypescript} />
 					<TechBadge label="JavaScript" svg={SiJavascript} />
 					<TechBadge label="React" svg={SiReact} />
+					<TechBadge label="Node.js" svg={SiNodedotjs} />
 					<TechBadge label="GraphQL" svg={SiGraphql} />
 					<TechBadge label="Python" svg={SiPython} />
-					<TechBadge label="Next.JS" svg={SiNextdotjs} />
+					<TechBadge label="Next.js" svg={SiNextdotjs} />
 					<TechBadge label="CSS3" svg={SiCss3} />
 					<TechBadge label="SCSS" svg={SiSass} />
+					<TechBadge label="PostgreSQL" svg={SiPostgresql} />
+					<TechBadge label="MySQL" svg={SiMysql} />
 					<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
 				</motion.ul>
 			</Lazy>
