@@ -1,4 +1,3 @@
-import Lazy from "react-lazyload";
 import React from "react";
 import Layout from "./Layout";
 import Tag from "./Tag";
@@ -16,18 +15,17 @@ export default function BlogCard({ title, tags, url }: Props) {
 			href={url}
 			target="_blank"
 			rel="noreferrer"
-			className="blog-card flex-col justify-center sm:justify-between p-12 shadow-xl w-full p-8 rounded-3xl bg-gradient-to-bl from-green-400 via-green-500 to-blue-800 max-w-lg h-80"
+			className="blog-card flex-col justify-center sm:justify-between p-12 shadow-xl w-full rounded-xl bg-gradient-to-bl from-green-400 via-green-500 to-blue-800 max-w-lg h-80"
 		>
 			<h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl">
 				{title}
 			</h1>
-			<Lazy offset={100}>
-				<div className="gap-4 mt-10 hidden sm:block">
-					{tags.map((tag) => (
-						<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
-					))}
-				</div>
-			</Lazy>
+
+			<div className="gap-4 mt-10 hidden sm:block">
+				{tags.map((tag) => (
+					<Tag className="md:mx-4" key={tag} label={tag} color="bg-dark" />
+				))}
+			</div>
 		</Layout>
 	);
 }

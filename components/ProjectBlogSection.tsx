@@ -10,15 +10,15 @@ export default function BlogSection({
 			<h2 className="dark:text-white text-primary text-2xl md:text-3xl lg:text-4xl font-bold my-10">
 				{title}
 			</h2>
-			{items.map((item) => (
-				<ul key={item}>
-					<li className="list-disc text-gray-300">
+			<ul>
+				{items.map((item) => (
+					<li key={item} className="list-disc text-gray-300">
 						<p className="dark:text-gray-300 text-primary text-lg lg:text-xl leading-10  my-4">
 							{item}
 						</p>
 					</li>
-				</ul>
-			))}
+				))}
+			</ul>
 		</section>
 	);
 }

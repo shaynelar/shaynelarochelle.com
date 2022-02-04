@@ -38,27 +38,26 @@ export default function TechSection() {
 			<Heading className="text-2xl lg:text-5xl text-white text-center font-bold my-8">
 				Tech I&apos;ve been working with recently
 			</Heading>
-			<Lazy>
-				<motion.ul
-					className="flex flex-wrap justify-center max-w-5xl md:mt-4"
-					variants={container}
-					initial="hidden"
-					animate="show"
-				>
-					<TechBadge label="TypeScript" svg={SiTypescript} />
-					<TechBadge label="JavaScript" svg={SiJavascript} />
-					<TechBadge label="React" svg={SiReact} />
-					<TechBadge label="Node.js" svg={SiNodedotjs} />
-					<TechBadge label="GraphQL" svg={SiGraphql} />
-					<TechBadge label="Python" svg={SiPython} />
-					<TechBadge label="Next.js" svg={SiNextdotjs} />
-					<TechBadge label="CSS3" svg={SiCss3} />
-					<TechBadge label="SCSS" svg={SiSass} />
-					<TechBadge label="PostgreSQL" svg={SiPostgresql} />
-					<TechBadge label="MySQL" svg={SiMysql} />
-					<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
-				</motion.ul>
-			</Lazy>
+
+			<motion.ul
+				className="flex flex-wrap justify-center max-w-5xl md:mt-4"
+				variants={container}
+				initial="hidden"
+				animate="show"
+			>
+				<TechBadge label="TypeScript" svg={SiTypescript} />
+				<TechBadge label="JavaScript" svg={SiJavascript} />
+				<TechBadge label="React" svg={SiReact} />
+				<TechBadge label="Node.js" svg={SiNodedotjs} />
+				<TechBadge label="GraphQL" svg={SiGraphql} />
+				<TechBadge label="Python" svg={SiPython} />
+				<TechBadge label="Next.js" svg={SiNextdotjs} />
+				<TechBadge label="CSS3" svg={SiCss3} />
+				<TechBadge label="SCSS" svg={SiSass} />
+				<TechBadge label="PostgreSQL" svg={SiPostgresql} />
+				<TechBadge label="MySQL" svg={SiMysql} />
+				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
+			</motion.ul>
 		</Layout>
 	);
 }
