@@ -96,15 +96,17 @@ export default function ProjectCard({ project }: Props) {
 			)}
 
 			{project.video && (
-				<video
-					className="object-cover md:rounded-md   shadow-md md:h-80"
-					controls
-					width="1920px"
-					height="1080px"
-					muted
-				>
-					<source src={project.video} type="video/mp4" />
-				</video>
+				<LazyLoad height={100}>
+					<video
+						className="object-cover md:rounded-md   shadow-md md:h-80"
+						controls
+						width="1920px"
+						height="1080px"
+						muted
+					>
+						<source src={project.video} type="video/mp4" />
+					</video>
+				</LazyLoad>
 			)}
 		</motion.div>
 	);
