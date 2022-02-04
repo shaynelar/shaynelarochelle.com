@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
 import Heading from "./Heading";
 import { Icon } from "./TechBadge";
 import Tag from "./Tag";
-import styles from "../styles/projectCard.module.scss";
-import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import { IoIosRocket, IoMdGlasses } from "react-icons/io";
 import ContactLink from "./ContactLink";

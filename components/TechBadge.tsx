@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import dynamic, { LoaderComponent } from "next/dynamic";
 import { IconBaseProps, IconType } from "react-icons";
 
@@ -5,10 +6,16 @@ interface Props {
 	svg: IconType;
 	label: string;
 }
-
+const listItem = {
+	hidden: { opacity: 0, x: 0 },
+	show: { opacity: 1, x: 0 },
+};
 export default function TechBadge({ svg, label }: Props) {
 	return (
-		<div className="border-2 dark:border-purple-400 border-blue-500 p-4 rounded-2xl m-2 flex  items-center dark:bg-dark bg-white shadow-lg ">
+		<motion.li
+			variants={listItem}
+			className="border-2 dark:border-purple-400 border-blue-500 p-4 rounded-2xl m-2 flex  items-center dark:bg-dark bg-white shadow-lg "
+		>
 			{svg({
 				className:
 					"dark:text-blue-200 text-primary text-3xl md:text-4xl lg:text-5xl",
@@ -16,7 +23,7 @@ export default function TechBadge({ svg, label }: Props) {
 			<span className="hidden sm:inline-block dark:text-white text-primary ml-4 lg:text-xl lg">
 				{label}
 			</span>
-		</div>
+		</motion.li>
 	);
 }
 

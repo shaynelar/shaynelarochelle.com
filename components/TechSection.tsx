@@ -15,6 +15,17 @@ import Layout from "./Layout";
 import TechBadge from "./TechBadge";
 import Heading from "./Heading";
 
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+
+		transition: {
+			staggerChildren: 0.1,
+		},
+	},
+};
+
 export default function TechSection() {
 	return (
 		<Layout
@@ -25,11 +36,11 @@ export default function TechSection() {
 				Tech I&apos;ve been working with recently
 			</Heading>
 			<Lazy>
-				<motion.div
+				<motion.ul
 					className="flex flex-wrap justify-center max-w-5xl md:mt-4"
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: true }}
+					variants={container}
+					initial="hidden"
+					animate="show"
 				>
 					<TechBadge label="TypeScript" svg={SiTypescript} />
 					<TechBadge label="JavaScript" svg={SiJavascript} />
@@ -40,7 +51,7 @@ export default function TechSection() {
 					<TechBadge label="CSS3" svg={SiCss3} />
 					<TechBadge label="SCSS" svg={SiSass} />
 					<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
-				</motion.div>
+				</motion.ul>
 			</Lazy>
 		</Layout>
 	);

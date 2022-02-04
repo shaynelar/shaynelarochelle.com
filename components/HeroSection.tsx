@@ -1,8 +1,27 @@
 import { motion } from "framer-motion";
 import Layout from "./Layout";
 import Heading from "./Heading";
+import ContactLink from "./ContactLink";
+import { SiGithub, SiLinkedin, SiStackoverflow } from "react-icons/si";
+
+const container = {
+	hidden: { opacity: 0, x: -50 },
+	show: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
+const listItem = {
+	hidden: { opacity: 0, x: 0 },
+	show: { opacity: 1, x: 0 },
+};
 
 export default function HeroSection() {
+	const HeaderLink = motion(ContactLink);
 	return (
 		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">
@@ -41,6 +60,38 @@ export default function HeroSection() {
 					experience designing, developing and deploying full-stack
 					applications.
 				</motion.p>
+
+				<motion.ul
+					className="flex md:flex-row gap-8 lg:gap-8 mt-8"
+					variants={container}
+					initial="hidden"
+					animate="show"
+				>
+					<motion.li variants={listItem}>
+						<ContactLink
+							link="https://github.com/shaynelar"
+							label="GitHub"
+							Tag={SiGithub}
+							header
+						/>
+					</motion.li>
+					<motion.li variants={listItem}>
+						<ContactLink
+							link="https://www.linkedin.com/in/shaynelarochelle/"
+							label="Linkedin"
+							Tag={SiLinkedin}
+							header
+						/>
+					</motion.li>
+					<motion.li variants={listItem}>
+						<ContactLink
+							link="https://stackoverflow.com/users/12244448/shaynel"
+							label="Stackoverflow"
+							Tag={SiStackoverflow}
+							header
+						/>
+					</motion.li>
+				</motion.ul>
 			</div>
 		</Layout>
 	);
