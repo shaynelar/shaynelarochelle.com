@@ -4,6 +4,16 @@ import MobileMenuButton from "./MobileMenuButton";
 import ThemeToggle from "./ThemeToggle";
 import lockBody from "../utils/helpers/lockBody";
 
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
 export default function MobileMenuList() {
 	const { isExpanded } = useMenuButtonContext();
 
@@ -22,18 +32,16 @@ export default function MobileMenuList() {
 					style={{ display: "block" }}
 					className="z-50"
 				>
-					<motion.div
+					<div
 						key="menu"
-						initial={{ y: -50, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						exit={{ y: -50, opacity: 0 }}
-						transition={{
-							duration: 0.3,
-							ease: "linear",
-						}}
 						className="flex flex-col h-full z-10 dark:bg-primary bg-white"
 					>
-						<ul className="flex flex-col z-10">
+						<motion.ul
+							variants={container}
+							initial="hidden"
+							animate="show"
+							className="flex flex-col z-10"
+						>
 							<MobileMenuButton onClick={lockBody} href="/#nav">
 								Home
 							</MobileMenuButton>
@@ -44,8 +52,8 @@ export default function MobileMenuList() {
 								Projects
 							</MobileMenuButton>
 							<ThemeToggle mobile />
-						</ul>
-					</motion.div>
+						</motion.ul>
+					</div>
 				</MenuPopover>
 			)}
 		</AnimatePresence>

@@ -5,10 +5,10 @@ import ContactLink from "./ContactLink";
 import { SiGithub, SiLinkedin, SiStackoverflow } from "react-icons/si";
 
 const container = {
-	hidden: { opacity: 0, x: -50 },
+	hidden: { opacity: 0 },
 	show: {
 		opacity: 1,
-		x: 0,
+
 		transition: {
 			staggerChildren: 0.2,
 		},
@@ -26,14 +26,14 @@ export default function HeroSection() {
 		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">
 				<motion.div
-					initial={{ opacity: 0, x: -200 }}
+					initial={{ opacity: 0, x: -500 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					viewport={{ once: true }}
 					transition={{
 						x: {
 							type: "just",
 							stiffness: 1000,
-							velocity: 0.2,
+							velocity: 1,
 							ease: "easeOut",
 						},
 						default: { duration: 1.5 },

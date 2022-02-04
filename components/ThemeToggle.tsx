@@ -11,7 +11,7 @@ export default function ThemeToggle({ mobile = false }: Props) {
 	return (
 		<div
 			className={`${
-				mobile ? "block flex m-12" : "hidden md:block ml-1"
+				mobile ? "flex m-12" : "hidden md:block ml-1"
 			} rounded-full text-center p-4 cursor-pointer  ${
 				isDark ? "bg-dark" : "bg-light"
 			}`}
