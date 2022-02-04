@@ -13,7 +13,7 @@ export default function TechBadge({ svg, label }: Props) {
 	return (
 		<motion.li
 			variants={listItem}
-			className="border-2 dark:border-purple-400 border-blue-500 p-4 rounded-2xl m-2 flex  items-center dark:bg-dark bg-white shadow-lg "
+			className="border-2 dark:border-green-500 border-blue-500 p-4 rounded-2xl m-2 flex  items-center dark:bg-dark bg-white shadow-lg "
 		>
 			{svg({
 				className: `dark:text-blue-300  text-primary text-3xl md:text-4xl lg:text-5xl`,

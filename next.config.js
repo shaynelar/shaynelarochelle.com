@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-	enabled: process.env.PRODUCTION,
+	enabled: true,
 });
 module.exports = withBundleAnalyzer({
 	reactStrictMode: true,

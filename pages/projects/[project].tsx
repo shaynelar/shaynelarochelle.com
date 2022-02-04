@@ -1,18 +1,19 @@
 import { promises as fs } from "fs";
 import path from "path";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 import { useRouter } from "next/router";
-import CustomHead from "../../components/Head";
-import NavBar from "../../components/NavBar";
+import { IoIosRocket } from "react-icons/io";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
-import { IProjects } from "../../utils/types";
 import ContactLink from "../../components/ContactLink";
-import { IoIosRocket } from "react-icons/io";
-import dynamic from "next/dynamic";
+// import NavBar from "../../components/NavBar";
+
+import { IProjects } from "../../utils/types";
 export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;
-	const NavBar = dynamic(() => import("../../components/NavBar"));
+
 	const pageData = projects[0].content.filter(
 		(content) => content.about.slug === project
 	)[0];
@@ -22,11 +23,13 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 	const ProjectBlogSection = dynamic(
 		() => import("../../components/ProjectBlogSection")
 	);
-	const Footer = dynamic(() => import("../../components/Footer"));
+	// const Footer = dynamic(() => import("../../components/Footer"));
 	return (
 		<>
-			<CustomHead />
-			<NavBar />
+			<Head>
+				<title>Shayne LaRochelle | {pageData.about.title}</title>
+			</Head>
+			{/* <NavBar /> */}
 			<Layout
 				as="section"
 				className="min-h-screen p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
@@ -70,7 +73,7 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 					items={pageData.different}
 				/>
 			</Layout>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 }

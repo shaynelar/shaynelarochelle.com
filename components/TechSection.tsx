@@ -42,7 +42,8 @@ export default function TechSection() {
 				className="flex flex-wrap justify-center max-w-5xl md:mt-4"
 				variants={container}
 				initial="hidden"
-				animate="show"
+				whileInView="show"
+				viewport={{ once: true }}
 			>
 				<TechBadge label="TypeScript" svg={SiTypescript} />
 				<TechBadge label="JavaScript" svg={SiJavascript} />
