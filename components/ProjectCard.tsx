@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Heading from "./Heading";
 import Icon from "./Icon";
 import Tag from "./Tag";
@@ -82,7 +81,7 @@ export default function ProjectCard({ project }: Props) {
 				))}
 			</div>
 			{project.image && (
-				<LazyLoad height={100}>
+				<LazyLoad height={100} once>
 					<Image
 						className="object-cover rounded-md w-full mt-4 shadow-md  h-80"
 						src={project.image}
@@ -97,7 +96,7 @@ export default function ProjectCard({ project }: Props) {
 			)}
 
 			{project.video && (
-				<LazyLoad height={100}>
+				<LazyLoad height={100} once>
 					<Video source={project.video} />
 				</LazyLoad>
 			)}

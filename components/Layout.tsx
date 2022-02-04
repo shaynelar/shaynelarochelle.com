@@ -14,7 +14,7 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 		//@ts-ignore TODO -> fix type
 		<Container
 			className={`flex justify-center items-center dark:bg-primary bg-white ${
-				className ?? ""
+				className || ""
 			}`}
 			{...props}
 		>

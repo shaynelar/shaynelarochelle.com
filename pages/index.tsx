@@ -1,28 +1,30 @@
-import type { NextPage } from "next";
-import React from "react";
+import type { NextPage } from "next"
 import HeroSection from "../components/HeroSection";
 import dynamic from "next/dynamic";
-// import NavBar from "../components/NavBar";
+import AboutSection from "../components/AboutSection";
 import Head from "next/head";
+import LazyWrapper from "../components/LazyWrapper";
+import NavBar from "../components/NavBar";
 
 const Home: NextPage = () => {
 	const TechSection = dynamic(() => import("../components/TechSection"));
-	const AboutSection = dynamic(() => import("../components/AboutSection"));
 	const ProjectSection = dynamic(() => import("../components/ProjectSection"));
 	const BlogSection = dynamic(() => import("../components/BlogSection"));
-	// const Footer = dynamic(() => import("../components/Footer"));
+	const Footer = dynamic(() => import("../components/Footer"));
 	return (
 		<>
 			<Head>
 				<title>Shayne LaRochelle | Software Developer</title>
 			</Head>
-			{/* <NavBar /> */}
+			<NavBar />
 			<HeroSection />
 			<AboutSection />
-			<TechSection />
-			<ProjectSection />
-			<BlogSection />
-			{/* <Footer /> */}
+			<LazyWrapper>
+				<TechSection />
+				<ProjectSection />
+				<BlogSection />
+				<Footer />
+			</LazyWrapper>
 		</>
 	);
 };

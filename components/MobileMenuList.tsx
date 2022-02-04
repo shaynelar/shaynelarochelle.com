@@ -1,5 +1,5 @@
 import { MenuPopover, useMenuButtonContext } from "@reach/menu-button";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m as motion } from "framer-motion";
 import MobileMenuButton from "./MobileMenuButton";
 import ThemeToggle from "./ThemeToggle";
 import lockBody from "../utils/helpers/lockBody";

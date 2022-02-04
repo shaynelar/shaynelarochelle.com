@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Layout from "./Layout";
 import Heading from "./Heading";
 import ContactLink from "./ContactLink";
@@ -21,7 +21,6 @@ const listItem = {
 };
 
 export default function HeroSection() {
-	const HeaderLink = motion(ContactLink);
 	return (
 		<Layout id="home" as="section" className="hero p-4 sm:p-8">
 			<div className="flex flex-col">

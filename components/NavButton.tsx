@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { motion, MotionProps } from "framer-motion";
+import { m as motion, MotionProps } from "framer-motion";
 import { AnchorProps } from "../utils/types";
 
 export default function NavButton({

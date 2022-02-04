@@ -12,7 +12,7 @@ import {
 	SiMysql,
 	SiNodedotjs,
 } from "react-icons/si";
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Layout from "./Layout";
 import TechBadge from "./TechBadge";
 import Heading from "./Heading";

@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "./Layout";
 import Image from "next/image";
 import Heading from "./Heading";
@@ -28,7 +27,7 @@ export default function AboutSection() {
 					Currently, I spend most of my free time building full stack projects
 					and expanding my knowledge of new technologies.{" "}
 				</p>
-				<LazyLoad height={100}>
+				<LazyLoad height={100} once>
 					<div className="md:h-60 lg:h-full w-full rounded-2xl mt-10 md:mt-0 overflow-hidden">
 						<Image
 							src="/myself.jpg"

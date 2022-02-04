@@ -7,7 +7,8 @@ import { IoIosRocket } from "react-icons/io";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
 import ContactLink from "../../components/ContactLink";
-// import NavBar from "../../components/NavBar";
+import NavBar from "../../components/NavBar";
+import LazyWrapper from "../../components/LazyWrapper";
 
 import { IProjects } from "../../utils/types";
 export default function Project({ projects }: { projects: IProjects[] }) {
@@ -17,19 +18,17 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 	const pageData = projects[0].content.filter(
 		(content) => content.about.slug === project
 	)[0];
-	const ProjectStackSection = dynamic(
-		() => import("../../components/ProjectStackSection")
-	);
+
 	const ProjectBlogSection = dynamic(
 		() => import("../../components/ProjectBlogSection")
 	);
-	// const Footer = dynamic(() => import("../../components/Footer"));
+	const Footer = dynamic(() => import("../../components/Footer"));
 	return (
 		<>
 			<Head>
 				<title>Shayne LaRochelle | {pageData.about.title}</title>
 			</Head>
-			{/* <NavBar /> */}
+			<NavBar />
 			<Layout
 				as="section"
 				className="min-h-screen p-4 md:py-8 lg:py-14 flex-col flex gap-4 lg:px-44 xl:px-60 md:px-24 px-10 sm:px-14 "
@@ -49,31 +48,21 @@ export default function Project({ projects }: { projects: IProjects[] }) {
 				<p className="dark:text-gray-300 text-primary  text-lg lg:text-xl leading-10  my-4">
 					{pageData.about.description}
 				</p>
-				<div className="dark:bg-dark bg-light rounded-xl p-4 flex flex-col gap-6 w-full items-center shadow-lg">
-					<ProjectStackSection
-						title="Client"
-						tech={pageData.about.tech.client}
+				<LazyWrapper>
+					<ProjectBlogSection title="What I Learned" items={pageData.learned} />
+					<ProjectBlogSection
+						title="Things that we're tough"
+						items={pageData.challenges}
 					/>
-					<ProjectStackSection
-						title="Server"
-						tech={pageData.about.tech.server}
+					<ProjectBlogSection
+						title="Things I'd do differently next time"
+						items={pageData.different}
 					/>
-					<ProjectStackSection
-						title="Deployment"
-						tech={pageData.about.tech.deployment}
-					/>
-				</div>
-				<ProjectBlogSection title="What I Learned" items={pageData.learned} />
-				<ProjectBlogSection
-					title="Things that we're tough"
-					items={pageData.challenges}
-				/>
-				<ProjectBlogSection
-					title="Things I'd do differently next time"
-					items={pageData.different}
-				/>
+				</LazyWrapper>
 			</Layout>
-			{/* <Footer /> */}
+			<LazyWrapper>
+				<Footer />
+			</LazyWrapper>
 		</>
 	);
 }

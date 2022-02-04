@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { AnchorProps } from "../utils/types";
 const listItem = {
 	hidden: { opacity: 0 },

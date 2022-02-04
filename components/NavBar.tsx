@@ -1,4 +1,3 @@
-import React from "react";
 import NavButton from "./NavButton";
 import Heading from "./Heading";
 import Link from "next/link";
