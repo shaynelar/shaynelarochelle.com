@@ -1,10 +1,11 @@
 import { Menu, MenuButton } from "@reach/menu-button";
+import dynamic from "next/dynamic";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import lockBody from "../utils/helpers/lockBody";
-import MobileMenuList from "./MobileMenuList";
 
 export default function MobileMenu() {
+	const MobileMenuList = dynamic(() => import("./MobileMenuList"));
 	return (
 		<div className="md:hidden">
 			<Menu>

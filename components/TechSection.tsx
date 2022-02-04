@@ -13,7 +13,6 @@ import {
 	SiNodedotjs,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import Lazy from "react-lazyload";
 import Layout from "./Layout";
 import TechBadge from "./TechBadge";
 import Heading from "./Heading";

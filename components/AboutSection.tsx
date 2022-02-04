@@ -1,9 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import Layout from "./Layout";
 import Heading from "./Heading";
-import LazyLoad from "react-lazyload";
+import dynamic from "next/dynamic";
 export default function AboutSection() {
+	const Image = dynamic(() => import("next/image"));
 	return (
 		<Layout
 			id="about"
@@ -27,19 +27,18 @@ export default function AboutSection() {
 					Currently, I spend most of my free time building full stack projects
 					and expanding my knowledge of new technologies.{" "}
 				</p>
-				<LazyLoad height={100}>
-					<div className="md:h-60 lg:h-full w-full rounded-2xl mt-10 md:mt-0 overflow-hidden">
-						<Image
-							src="/myself.jpg"
-							alt="Picture of Shayne"
-							className="rounded-2xl"
-							width="800px"
-							height="800px"
-							placeholder="blur"
-							blurDataURL={"/myself.jpg"}
-						/>
-					</div>
-				</LazyLoad>
+
+				<div className="md:h-60 lg:h-full w-full rounded-2xl mt-10 md:mt-0 overflow-hidden">
+					<Image
+						src="/myself.jpg"
+						alt="Picture of Shayne"
+						className="rounded-2xl"
+						width="800px"
+						height="800px"
+						placeholder="blur"
+						blurDataURL={"/myself.jpg"}
+					/>
+				</div>
 			</div>
 		</Layout>
 	);

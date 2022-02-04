@@ -1,4 +1,4 @@
-import { Icon } from "./TechBadge";
+import Icon from "./Icon";
 
 export default function StackSection({
 	title,

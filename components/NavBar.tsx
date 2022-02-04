@@ -1,11 +1,12 @@
 import React from "react";
 import NavButton from "./NavButton";
 import Heading from "./Heading";
-import MobileMenu from "./MobileMenu";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import dynamic from "next/dynamic";
 
 export default function NavBar() {
+	const MobileMenu = dynamic(() => import("./MobileMenu"));
 	return (
 		<header
 			id="nav"

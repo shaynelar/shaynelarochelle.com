@@ -1,13 +1,13 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Heading from "./Heading";
-import { Icon } from "./TechBadge";
+import Icon from "./Icon";
 import Tag from "./Tag";
 import { SiGithub } from "react-icons/si";
 import { IoIosRocket, IoMdGlasses } from "react-icons/io";
 import ContactLink from "./ContactLink";
 import LazyLoad from "react-lazyload";
+import dynamic from "next/dynamic";
 interface Props {
 	project: {
 		title: string;
@@ -26,6 +26,7 @@ interface Props {
 }
 
 export default function ProjectCard({ project }: Props) {
+	const Image = dynamic(() => import("next/image"));
 	return (
 		<motion.div
 			id={`${project.title}-card`}
@@ -95,17 +96,15 @@ export default function ProjectCard({ project }: Props) {
 			)}
 
 			{project.video && (
-				<LazyLoad height={100}>
-					<video
-						className="object-cover md:rounded-md   shadow-md md:h-80"
-						controls
-						width="1920px"
-						height="1080px"
-						muted
-					>
-						<source src={project.video} type="video/mp4" />
-					</video>
-				</LazyLoad>
+				<video
+					className="object-cover md:rounded-md   shadow-md md:h-80"
+					controls
+					width="1920px"
+					height="1080px"
+					muted
+				>
+					<source src={project.video} type="video/mp4" />
+				</video>
 			)}
 		</motion.div>
 	);

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import dynamic, { LoaderComponent } from "next/dynamic";
-import { IconBaseProps, IconType } from "react-icons";
+import { IconType } from "react-icons";
 
 interface Props {
 	svg: IconType;
@@ -23,19 +22,5 @@ export default function TechBadge({ svg, label }: Props) {
 				{label}
 			</span>
 		</motion.li>
-	);
-}
-
-export function Icon({ svg }: { svg: string }) {
-	//dynamically import icon if it is passed as prop
-	const Icon = dynamic(
-		() =>
-			import("react-icons/si").then(
-				(item) => item[svg]
-			) as LoaderComponent<IconBaseProps>
-	);
-
-	return (
-		<Icon className="dark:text-blue-200 text-primary text-2xl md:text-3xl mx-2" />
 	);
 }

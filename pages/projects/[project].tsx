@@ -3,21 +3,26 @@ import path from "path";
 import { useRouter } from "next/router";
 import CustomHead from "../../components/Head";
 import NavBar from "../../components/NavBar";
-import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import Heading from "../../components/Heading";
-import ProjectStackSection from "../../components/ProjectStackSection";
-import ProjectBlogSection from "../../components/ProjectBlogSection";
 import { IProjects } from "../../utils/types";
 import ContactLink from "../../components/ContactLink";
 import { IoIosRocket } from "react-icons/io";
+import dynamic from "next/dynamic";
 export default function Project({ projects }: { projects: IProjects[] }) {
 	const router = useRouter();
 	const { project } = router.query;
+	const NavBar = dynamic(() => import("../../components/NavBar"));
 	const pageData = projects[0].content.filter(
 		(content) => content.about.slug === project
 	)[0];
-	console.log(pageData)
+	const ProjectStackSection = dynamic(
+		() => import("../../components/ProjectStackSection")
+	);
+	const ProjectBlogSection = dynamic(
+		() => import("../../components/ProjectBlogSection")
+	);
+	const Footer = dynamic(() => import("../../components/Footer"));
 	return (
 		<>
 			<CustomHead />
