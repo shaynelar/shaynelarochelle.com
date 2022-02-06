@@ -1,0 +1,69 @@
+{
+    "about": {
+        "title": "Jobrium",
+        "description": "Jobrium is a job candidate analytics application platform that enables job candidates to keep track of their applications. Users can track their application status, track jobs they want to apply for, and store information about the jobs they already have applied for, simply by pasting in the jobs URL. The development process took approximately 3 months (Frontend, Backend and Deployment)",
+        "live": "www.jobrium.com",
+        "slug": "jobrium",
+        "tech": {
+            "client": [
+                {
+                    "name": "TypeScript",
+                    "icon": "SiTypescript"
+                },
+                {
+                    "name": "React",
+                    "icon": "SiReact"
+                },
+                {
+                    "name": "Next.JS",
+                    "icon": "SiNextdotjs"
+                }
+            ],
+            "server": [
+                {
+                    "name": "TypeScript",
+                    "icon": "SiTypescript"
+                },
+                {
+                    "name": "Apollo Server",
+                    "icon": "SiApollographql"
+                },
+                {
+                    "name": "Node.JS",
+                    "icon": "SiNodedotjs"
+                },
+                {
+                    "name": "PostreSQL",
+                    "icon": "SiPostgresql"
+                },
+                {
+                    "name": "GraphQL",
+                    "icon": "SiGraphQL"
+                }
+            ],
+            "deployment": [
+                {
+                    "name": "AWS",
+                    "icon": "SiAmazonaws"
+                },
+                {
+                    "name": "Vercel",
+                    "icon": "SiVercel"
+                }
+            ]
+        }
+    },
+    "challenges": [
+        "Puppeteer combined with the chrome webdriver binaries caused the project to become too large to deploy on AWS Lambda. To get around this issue I was required to create a separate lambda layer for the chrome driver binaries. This ended up being less than straightforward but I was able to make it work in the end.",
+        "Configuring CORS on the API Gateway instance was more tedious than I was expecting. API Gateway when combined with the serverless framework had some less than obvious configuration requirements. It took several read throughs of the documentation for both tools to ensure that I finally was providing all proper headers and requirements in the correct locations."
+    ],
+    "learned": [
+        "Significantly enhanced my knowledge of Typescript. I was able to start using more advanced types including Utility types and Generics.",
+        "Originally the app could auto-fill job info when a user entered a URL for a position. It did this by running a scraping service from a sepereate Lambda function. Unfortunately, this violated the terms of use of all of the job boards I was planning on allowing the script to be run on and had to take it down. I should have done more research before imlementing this feature to ensure it was allowed/ethical.",
+        "Using Higher Order Components to create protected client side routes"
+    ],
+    "different": [
+        "Make sure features are both technically possible and feasible before implementing them.",
+        "Write more and better tests."
+    ]
+}

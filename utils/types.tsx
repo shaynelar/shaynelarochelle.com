@@ -6,7 +6,7 @@ interface IStack {
 	icon: keyof IconType;
 }
 
-interface Project {
+export interface Project {
 	about: {
 		title: string;
 		description: string;
@@ -40,6 +40,23 @@ export interface ThemeState {
 
 export interface IProjects {
 	content: Project[];
+}
+
+export interface ProjectCardData {
+	data: {
+		title: string;
+		about: string;
+		image: string | null;
+		video: string | null;
+		type: {
+			title: string;
+			color: string;
+		};
+		svg: string[];
+		blog: string | null;
+		live: string | null;
+		github: string | null;
+	}[];
 }
 
 export type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &

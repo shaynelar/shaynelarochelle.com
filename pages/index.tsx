@@ -1,16 +1,18 @@
-import type { NextPage } from "next";
+import React from "react";
 import HeroSection from "../components/HeroSection";
 import dynamic from "next/dynamic";
 import AboutSection from "../components/AboutSection";
 import Head from "next/head";
-import LazyWrapper from "../components/LazyWrapper";
 import NavBar from "../components/NavBar";
+import { ProjectCardData } from "../utils/types";
+import { GetStaticPropsResult } from "next";
 
-const Home: NextPage = () => {
-	const TechSection = dynamic(() => import("../components/TechSection"));
+const Home = ({ data }: ProjectCardData) => {
 	const ProjectSection = dynamic(() => import("../components/ProjectSection"));
+	const TechSection = dynamic(() => import("../components/TechSection"));
 	const BlogSection = dynamic(() => import("../components/BlogSection"));
 	const Footer = dynamic(() => import("../components/Footer"));
+
 	return (
 		<>
 			<Head>
@@ -19,14 +21,22 @@ const Home: NextPage = () => {
 			<NavBar />
 			<HeroSection />
 			<AboutSection />
-			<LazyWrapper>
-				<TechSection />
-				<ProjectSection />
-				<BlogSection />
-				<Footer />
-			</LazyWrapper>
+			<TechSection />
+			<ProjectSection data={data} />
+			<BlogSection />
+			<Footer />
 		</>
 	);
 };
 
+export async function getStaticProps(): Promise<
+	GetStaticPropsResult<ProjectCardData>
+> {
+	const data = require("../data/project-card-data.json");
+	return {
+		props: {
+			data,
+		},
+	};
+}
 export default Home;

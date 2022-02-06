@@ -1,0 +1,57 @@
+{
+    "about": {
+        "title": "Friends of Japan",
+        "live": null,
+        "description": "Friends of Japan was a social media and content discovery platfrom focused on Japanese Anime. At the time, my friend and I ran an Anime focused Instagram page that had ~20K followers. We noticed our followers were having long discussions on our posts and were also messaging us for show recomendations. I built this site to provide our community with a platform better suited to their needs. The development process took approximately 4 months (Frontend, Backend and Deployment)",
+        "slug": "friendsofjapan",
+        "tech": {
+            "client": [
+                {
+                    "name": "TypeScript",
+                    "icon": "SiTypescript"
+                },
+                {
+                    "name": "React",
+                    "icon": "SiReact"
+                },
+                {
+                    "name": "Next.JS",
+                    "icon": "SiNextdotjs"
+                }
+            ],
+            "server": [
+                {
+                    "name": "Python",
+                    "icon": "SiPython"
+                },
+                {
+                    "name": "Django",
+                    "icon": "SiDjango"
+                }
+            ],
+            "deployment": [
+                {
+                    "name": "AWS",
+                    "icon": "SiAmazonaws"
+                },
+                {
+                    "name": "Vercel",
+                    "icon": "SiVercel"
+                }
+            ]
+        }
+    },
+    "challenges": [
+        "The app has a feature where users can like or dislike content. Each user, however, can only have one review per piece of content, outstanding, at a time. I  learned about and constructed composite key tables in my database for 'liked/disliked' objects to handle the issue."
+    ],
+    "learned": [
+        "API security, CORS",
+        "Composite Keys in SQL",
+        "Different Authentication options. Project briefly utilized JWT’s but was transitioned to using session tokens after doing more research.",
+        "Benefits of static site generation vs server-side rendering vs client-side rendering. I ended up using all these techniques in the project. With most of the site being statically generated or statically generated with additional client-side hydration."
+    ],
+    "different": [
+        "Focus on the mandatory components of the app first, then build cool/ fun stuff. Removed features include: live chat rooms, personalized twitter feeds (built from the twitter API based off terms the user liked and content the user liked on Friends of Japan) and planning was also underway to have in app achievements and leaderboards for users’ stats. While these features, were fun to make, they were time consuming, put the project behind schedule and would have been better added in for a subsequent version of the app.",
+        "Organize components better/more logically."
+    ]
+}
