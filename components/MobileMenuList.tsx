@@ -48,6 +48,10 @@ export default function MobileMenuList() {
 							<MobileMenuButton onClick={lockBody} href="/#about">
 								About
 							</MobileMenuButton>
+							<MobileMenuButton onClick={lockBody} href="/#blog">
+								Blog
+							</MobileMenuButton>
+
 							<MobileMenuButton onClick={lockBody} href="/#projects">
 								Projects
 							</MobileMenuButton>

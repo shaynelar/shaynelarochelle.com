@@ -52,6 +52,7 @@ export default function ProjectCard({ project }: Props) {
 									link={project.github}
 									label="View the code"
 									Tag={SiGithub}
+									newTab={false}
 								/>
 							)}
 							{project.live && (
@@ -59,6 +60,7 @@ export default function ProjectCard({ project }: Props) {
 									link={project.live}
 									label="View it Live"
 									Tag={IoIosRocket}
+									newTab={false}
 								/>
 							)}
 							{project.blog && (
@@ -66,6 +68,7 @@ export default function ProjectCard({ project }: Props) {
 									link={project.blog}
 									label="Read the blog"
 									Tag={IoMdGlasses}
+									newTab={false}
 								/>
 							)}
 						</div>

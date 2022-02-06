@@ -5,13 +5,20 @@ interface Props {
 	label: string;
 	link: string;
 	header?: boolean;
+	newTab?: boolean;
 }
 
-export default function ContactLink({ Tag, label, link, header }: Props) {
+export default function ContactLink({
+	Tag,
+	label,
+	link,
+	header,
+	newTab = true,
+}: Props) {
 	return (
 		<a
 			href={link}
-			target="_blank"
+			target={newTab ? "_blank" : "_self"}
 			className="dark:text-white text-primary"
 			rel="noreferrer"
 		>
