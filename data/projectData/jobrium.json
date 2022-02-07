@@ -2,7 +2,7 @@
     "about": {
         "title": "Jobrium",
         "description": "Jobrium is a job candidate analytics application platform that enables job candidates to keep track of their applications. Users can track their application status, track jobs they want to apply for, and store information about the jobs they already have applied for, simply by pasting in the jobs URL. The development process took approximately 3 months (Frontend, Backend and Deployment)",
-        "live": "www.jobrium.com",
+        "live": "https://www.jobrium.com",
         "slug": "jobrium",
         "tech": {
             "client": [

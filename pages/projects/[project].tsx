@@ -12,6 +12,7 @@ export default function Project({ project }: { project: ProjectType }) {
 		() => import("../../components/ProjectBlogSection")
 	);
 	const Footer = dynamic(() => import("../../components/Footer"));
+	console.log(project.about.live);
 	return (
 		<>
 			<Head>

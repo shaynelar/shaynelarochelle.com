@@ -1,9 +1,13 @@
 import Layout from "./Layout";
 import Heading from "./Heading";
-import ProjectCard from "./ProjectCard";
+// import ProjectCard from "./ProjectCard";
 import { ProjectCardData } from "../utils/types";
+import dynamic from "next/dynamic";
 
 export default function ProjectSection({ data }: ProjectCardData) {
+	const ProjectCard = dynamic(() => import("./ProjectCard"), {
+		loading: () => <div>Loading...</div>,
+	});
 	return (
 		<Layout
 			id="projects"

@@ -3,9 +3,11 @@ import Heading from "./Heading";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import dynamic from "next/dynamic";
+import useWindowWidth from "../utils/hooks/use-window-width";
 
 export default function NavBar() {
 	const MobileMenu = dynamic(() => import("./MobileMenu"));
+	const windowWidth = useWindowWidth();
 	return (
 		<header
 			id="nav"
@@ -23,7 +25,7 @@ export default function NavBar() {
 						<NavButton href="/#projects">Projects</NavButton>
 						<NavButton href="/#blog">Blog</NavButton>
 					</ul>
-					<MobileMenu />
+					{windowWidth && windowWidth < 790 && <MobileMenu />}
 				</nav>
 				<ThemeToggle />
 			</div>

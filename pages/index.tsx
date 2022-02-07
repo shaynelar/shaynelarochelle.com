@@ -1,11 +1,11 @@
-import React from "react";
 import HeroSection from "../components/HeroSection";
 import dynamic from "next/dynamic";
-import AboutSection from "../components/AboutSection";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import { ProjectCardData } from "../utils/types";
 import { GetStaticPropsResult } from "next";
+import LazyWrapper from "../components/LazyWrapper";
+import AboutSection from "../components/AboutSection";
 
 const Home = ({ data }: ProjectCardData) => {
 	const ProjectSection = dynamic(() => import("../components/ProjectSection"));
@@ -21,10 +21,12 @@ const Home = ({ data }: ProjectCardData) => {
 			<NavBar />
 			<HeroSection />
 			<AboutSection />
-			<TechSection />
-			<ProjectSection data={data} />
-			<BlogSection />
-			<Footer />
+			<LazyWrapper>
+				<TechSection />
+				<ProjectSection data={data} />
+				<BlogSection />
+				<Footer />
+			</LazyWrapper>
 		</>
 	);
 };
