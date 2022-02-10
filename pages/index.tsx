@@ -1,18 +1,15 @@
 import HeroSection from "../components/HeroSection";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-import { ProjectCardData } from "../utils/types";
+import { IndexStaticResponse } from "../utils/types";
 import { GetStaticPropsResult } from "next";
-import LazyWrapper from "../components/LazyWrapper";
 import AboutSection from "../components/AboutSection";
+import ProjectSection from "../components/ProjectSection";
+import TechSection from "../components/TechSection";
+import BlogSection from "../components/BlogSection";
+import Footer from "../components/Footer";
 
-const Home = ({ data }: ProjectCardData) => {
-	const ProjectSection = dynamic(() => import("../components/ProjectSection"));
-	const TechSection = dynamic(() => import("../components/TechSection"));
-	const BlogSection = dynamic(() => import("../components/BlogSection"));
-	const Footer = dynamic(() => import("../components/Footer"));
-
+const Home = ({ data, blogData }: IndexStaticResponse) => {
 	return (
 		<>
 			<Head>
@@ -21,23 +18,24 @@ const Home = ({ data }: ProjectCardData) => {
 			<NavBar />
 			<HeroSection />
 			<AboutSection />
-			<LazyWrapper>
-				<TechSection />
-				<ProjectSection data={data} />
-				<BlogSection />
-				<Footer />
-			</LazyWrapper>
+			<TechSection />
+			<ProjectSection data={data} />
+			<BlogSection blogData={blogData} />
+
+			<Footer />
 		</>
 	);
 };
 
 export async function getStaticProps(): Promise<
-	GetStaticPropsResult<ProjectCardData>
+	GetStaticPropsResult<IndexStaticResponse>
 > {
 	const data = require("../data/project-card-data.json");
+	const blogData = require("../data/blog-data.json");
 	return {
 		props: {
 			data,
+			blogData,
 		},
 	};
 }

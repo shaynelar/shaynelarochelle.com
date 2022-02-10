@@ -59,5 +59,13 @@ export interface ProjectCardData {
 	}[];
 }
 
+export interface BlogData {
+	blogData: {
+		title: string;
+		tags: string[];
+		url: string;
+	}[];
+}
+export type IndexStaticResponse = ProjectCardData & BlogData;
 export type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
 	Required<{ href: string }>;

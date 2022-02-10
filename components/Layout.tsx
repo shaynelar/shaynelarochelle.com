@@ -1,5 +1,7 @@
 //props should be dynamically type safe for any tag type
-type Props<Element extends keyof JSX.IntrinsicElements> = {
+type Props<
+	Element extends keyof Omit<JSX.IntrinsicElements, "SVGSymbolElement">
+> = {
 	as?: keyof JSX.IntrinsicElements;
 	children: React.ReactNode;
 } & JSX.IntrinsicElements[Element];
@@ -11,7 +13,7 @@ function Layout<Element extends keyof JSX.IntrinsicElements>({
 	...props
 }: Props<Element>) {
 	return (
-		//@ts-ignore TODO -> fix type
+		//@ts-ignore FIX
 		<Container
 			className={`flex justify-center items-center dark:bg-primary bg-white ${
 				className || ""

@@ -25,7 +25,7 @@ import {
 	SiWebassembly,
 } from "react-icons/si";
 export default function Icon({ svg }: { svg: string }) {
-	//NOTE: this was the original import method,
+	// NOTE: this was the original import method,
 	// but  bundle size was drastically reduced by explitily
 	// importing the icons all at once
 	// dynamically import icon if it is passed as prop (1.3mb gzipped -> 17.8kb gzipped)
@@ -35,6 +35,8 @@ export default function Icon({ svg }: { svg: string }) {
 	// 			(item) => item[svg]
 	// 		) as LoaderComponent<IconBaseProps>
 	// );
+
+	//build an object of all icons
 	const icons = {
 		SiRust,
 		SiWebassembly,
@@ -57,7 +59,7 @@ export default function Icon({ svg }: { svg: string }) {
 		SiPandas,
 		SiTensorflow,
 	};
-
+	//get the icon that matches the string prop and cast to correct type
 	const Icon = icons[svg as keyof IconType] as ComponentType<IconBaseProps>;
 
 	return (
