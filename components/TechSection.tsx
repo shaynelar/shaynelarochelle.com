@@ -11,6 +11,7 @@ import {
 	SiPostgresql,
 	SiMysql,
 	SiNodedotjs,
+	SiAngular,
 } from "react-icons/si";
 import { m as motion } from "framer-motion";
 import Layout from "./Layout";
@@ -48,6 +49,7 @@ export default function TechSection() {
 				<TechBadge label="TypeScript" svg={SiTypescript} />
 				<TechBadge label="JavaScript" svg={SiJavascript} />
 				<TechBadge label="React" svg={SiReact} />
+				<TechBadge label="Angular" svg={SiAngular} />
 				<TechBadge label="Node.js" svg={SiNodedotjs} />
 				<TechBadge label="GraphQL" svg={SiGraphql} />
 				<TechBadge label="Python" svg={SiPython} />
@@ -56,7 +58,7 @@ export default function TechSection() {
 				<TechBadge label="SCSS" svg={SiSass} />
 				<TechBadge label="PostgreSQL" svg={SiPostgresql} />
 				<TechBadge label="MySQL" svg={SiMysql} />
-				<TechBadge label="AWS Cloud" svg={SiAmazonaws} />
+				<TechBadge label="AWS" svg={SiAmazonaws} />
 			</motion.ul>
 		</Layout>
 	);
