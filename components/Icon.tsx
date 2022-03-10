@@ -23,6 +23,7 @@ import {
 	SiTensorflow,
 	SiRust,
 	SiWebassembly,
+	SiAngular,
 } from "react-icons/si";
 export default function Icon({ svg }: { svg: string }) {
 	// NOTE: this was the original import method,
@@ -39,6 +40,7 @@ export default function Icon({ svg }: { svg: string }) {
 	//build an object of all icons
 	const icons = {
 		SiRust,
+		SiAngular,
 		SiWebassembly,
 		SiTypescript,
 		SiReact,
